@@ -1,0 +1,1862 @@
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{textcomp}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{comment}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{black}}
+
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{20 đề ôn thi lớp 10}
+\rhead{Lớp cô Nguyễn Thị Ngọc Lam}
+\rfoot{Trang \thepage}
+
+\begin{document}
+\begin{titlepage}
+	\thispagestyle{empty}
+	\begin{center}
+		
+		\vspace*{2cm}
+		
+		{\large\bf  Nguyễn Thị Ngọc Lam}
+		
+		\vspace*{2cm}
+		
+		{\Large\bf 20 ĐỀ LUYỆN THI LỚP 10 MÔN TOÁN}
+		
+		\vspace*{0.5cm}
+		
+		{\large\bf (CÓ PHÂN TÍCH VÀ LỜI GIẢI CHI TIẾT)}
+		
+		\vspace*{5cm}
+		\includegraphics[width=15 cm]{bai-toan-thuc-te.png}
+		\vfill
+		
+		{\bf Hồ Chí Minh City - 10/04/2018}
+	\end{center}
+\end{titlepage}
+
+\break
+
+\tableofcontents
+
+\
+
+\section{Cấu trúc đề thi và thang điểm}
+
+Đề thi bao gồm 10 câu, mỗi câu 1 điểm. \par
+
+Trong đó 5 câu đầu kiểm tra kiến thức ở cấp học, chủ yếu là lớp 9 với mức độ thông hiểu và vận dụng. Nội dung kiến thức bao gồm: Hàm số bậc nhất, hàm số bậc 2, đồ thị hàm số bậc nhất, đồ thị hàm số bậc 2, sự tương giao của 2 đường thẳng, phương trình, hệ phương trình, hệ thức lượng trong tam giác vuông, tỷ số lượng giác... \par
+
+Về kiến thức hình học, đó là các kiến thức về đường tròn (sự xác định, tiếp tuyến...), độ dài, diện tích hình tròn, thể tích khối hộp chữ nhật, khối chóp... \par
+
+Ba câu tiếp theo là vận dụng các kiến thức đã học để giải quyết các vấn đề thực tiễn như lãi suất, tính phần trăm, nồng độ dung dịch, quang, nhiệt, điện, chuyển động đều... ở mức độ vận dụng. Hai câu hỏi cuối là sự vận dụng các kiến thức đã học giải quyết các vấn đề thực tiễn ở mức độ vận dụng cao. Học sinh (HS) phải biết xây dựng mô hình toán học, thiết lập phương trình, hệ phương trình để giải quyết bài toán. \par
+
+Nắm đầy đủ kiến thức, khái niệm, định nghĩa, định lý, hệ quả. Bên cạnh đó đòi hỏi có khả năng đọc, tư duy, phân tích, phản biện một vấn đề. Cũng cần có kỹ năng thực hành đo đạc, tính toán, biết phân biệt số đúng, số gần đúng, biết đặt ẩn đưa về phương trình, hệ phương trình...\par
+
+Ma trận đề thi minh họa môn toán bao gồm các kiến thức: Định lý Viete, hàm số bậc nhất yêu cầu ở mức độ thông hiểu. Các kiến thức đồ thị hàm số - giải phương trình, góc nội tiếp, hệ thức lượng trong tam giác vuông, định lý Pitago, tính phần trăm lời - lỗ, định lý Thales, tính phần trăm phương trình bậc nhất ở mức độ vận dụng. Còn kiến thức về hệ phương trình bậc nhất 2 ẩn, góc giữa tia tiếp tuyến và dây cung, tam giác đồng dạng đòi hỏi mức độ vận dụng cao.\par
+
+\subsection{Dạng toán đồ thị và tương quan đồ thị bậc 1 và bậc 2}
+Kiến thức cần nắm : \par
+Phương trình tổng quát hàm số bậc nhất : $(D) y = ax + b (a \ne b)$ \par
+Trong đó : a là hệ số góc của đường thẳng đồ thị hàm số $y = ax + b (a \ne b)$ \par
+
+\begin{multicols}{2}
++ a > 0 : Đường thẳng (D) hợp với chiều dương trục hoành một góc nhọn $(< 90^o)$
+\begin{center}
+    \includegraphics[width=5cm]{cd1-1.png}
+\end{center}
+
+\columnbreak
+
++ a < 0 : Đường thẳng (D) hợp với chiều dương trục hoành một góc tù $(> 90^o)$
+\begin{center}
+    \includegraphics[width=5cm]{cd1-2.png}
+\end{center}
+
+\end{multicols}
+
+\textbf{Mối tương quan giữa 2 đồ thị đường thẳng của 2 hàm số bậc 1}
+Cho $(D_1) : y = a_1x + b_1$ và $(D_2) : y = a_2x + b_2$
+
+\begin{multicols}{2}
+
++ $(D_1) // (D_2)$, ta có :
+obreaknewline\begin{cases}
+    a_1 = a_2 \\
+    b_1 \ne b_2
+\end{cases}
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=5cm]{cd1-a}
+\end{center}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
++ $(D_1) \bot (D_2)$, ta có :
+\begin{cases}
+    a_1.a_2 = -1\\
+    b_1 \ne b_2
+\end{cases}
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=5cm]{cd1-b}
+\end{center}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
++ $(D_1)$ cắt $(D_2)$, ta có :
+\begin{cases}
+    a_1 \ne a_2 \\
+    b_1 \ne b_2
+\end{cases}
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=5cm]{cd1-c}
+\end{center}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
++ $(D_1)$ trùng $(D_2)$, ta có :
+\begin{cases}
+    a_1 = a_2 \\
+    b_1 = b_2
+\end{cases}
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=5cm]{cd1-d}
+\end{center}
+
+\end{multicols}
+
+\textbf{Phương trình đồ thị hàm số Parabol (P)} : $y = ax^2 (a \ne 0)$. \par
+\begin{multicols}{2}
++ Với $a > 0$ thì Parabol quay bề lõm lên trên 
+\columnbreak
+\begin{center}
+    \includegraphics[width=5cm]{cd1-4.png}
+\end{center}
+\end{multicols}
+
+\begin{multicols}{2}
++ Với $a < 0$ thì Parabol quay bề lõm xuống dưới
+\columnbreak
+\begin{center}
+    \includegraphics[width=5cm]{cd1-3.png}
+\end{center}
+\end{multicols}
+
+\textbf{Công thức tính khoảng cách nối 2 điểm $A(x_1, y_1)$ và $B(x_2, y_2)$ } \par
+$$AB = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$
+Tương quan giữa Parabol (P) $y = f(x)$ và $y = g(x)$ (D) : \par
++ (P) cắt (D) tại 2 điềm phân biệt thì phương trình hoành độ giao điểm $f(x) = g(x)$ có 2 nghiệp phân biệt $\Delta > 0$\par
++ (P) tiếp xúc (D) tại 2 điềm phân biệt thì phương trình hoành độ giao điểm $f(x) = g(x)$ có 1 nghiệm kép $\Delta = 0$\par
++ (P) không cắt (D) thì phương trình hoành độ giao điểm $f(x) = g(x)$ có 1 nghiệm kép $\Delta = 0$\par
+\textbf{Phần bài toán theo chuyên đề} \par
+1. Xác định toạ đổ điểm thuộc và không thuộc đồ thị hàm số, tính hàm số tại điểm có tung độ $y = y_o$ hoặc $x = x_o$ \par
+a) Cho hàm số $y = f(x) = ax^2 (a \ne 0)$ \par
+* Với a = 1, tính giá trị biểu thức sau : $f(\dfrac{1}{2} + f(2) - f(1)$.
+* Tìm a để đồ thị hàm số đi qua điểm A(-1; 2). Vẽ đồ thị với a vừa tìm được. \par
+* Với a = 1, xác định toạ độ điểm $M \in (P)$ và $N \in (P)$ có hoành độ lần lượt là 1 và 2.\par
+
+b) Cho phương trình đường thẳng theo tham số m : $y = 2(m + 1)x - m + 2 (d)$ và Parabol : $y = x^2$ (P) \par
+* Tìm m để (d) không đi qua điểm (4; 1) \par
+* Tìm m để đường thẳng (d) đi qua điểm có hoành độ bằng 1, điểm này năm trên (P) \par
+* Tìm m để đường thẳng (d) song song với đường thẳng $y = (m^2 + 3)x - m$ \par
+* Tìm m để đường thẳng (d) cắt trục tung tại điểm có tung độ không vượt quá 0,5. \par
+* Tìm m để đường thẳng (d) tạo với 2 trục toạ độ một tam giác có tỷ số hai cạnh góc vuông là 1:4. \par
+* Chứng minh (d) cắt (P) tại 2 điểm phân biệt với mọi m. \par
+* Gọi $x_1, x_2$ là hoành độ giao điểm của (d) và (P). Tìm m để : \par
+$x_1 + x_2 \ge 10x_1.x_2 + 5$ \par
+$x_1^2 + x_2^2 = 7m + 8$ \par
+$\dfrac{1}{x_1 - 1} + \dfrac{1}{x_2 - 1} = -\dfrac{1}{2}$ \par
+$B_{min} = \left|{x_1 - x_2}\right|$ \par
+Gọi $y_1, y_2$ lần lượt là tung độ của toạ độ giao điêm (P) và (d).Cho m = 1, tính giá trị các biểu thức sau :  \par
+$A = y_1^3 + y_2^3$ \par
+$B = 3y_1^2 - y_2 + 3y_1^2 - y_1$ \par
+$C =  \dfrac{2}{y_1 - y_2} + \dfrac{2}{y_1 + y_2}$
+
+\subsection{Dạng toán tìm m để phương trình có 2 nghiệm thoả hệ thức cho trước - Bài toán bái dụng định lý Viét} \par
+\underline{Lý Thuyết cần nắm} \par
+
+1. Hằng đẳng thức đáng nhớ : \par
+
+a) $(A + B)^2 = A^2 + 2AB + B^2$ \par
+b) $(A - B)^2 = A^2 - 2AB + B^2$ \par
+c) $(A + B)^3 = A^3 + 3A^2B + 2AB^2 + B^3$ \par
+d) $(A - B)^3 = A^3 - 3A^2B + 2AB^2 - B^3$ \par
+e) $A^3 + B^3 = (A + B)(A^2 - AB + B^2)$ \par
+f) $A^3 - B^3 = (A - B)(A^2 + AB + B^2)$ \par
+g) $A^2 - B^2 = (A + B)(A - B)$ \par
+
+\   
+
+2. Phương trình tích : A.B.C = 0 => A = 0 hoặc B = 0 hoặc C = 0. \par
+Dạng tổng quát của phương trình hàm số bậc 2 : $ax^2 + bx + c = 0 (a \ ne 0)$ \par
+Công thức nghiệm : Thông nhất dùng công thức nghiệm dạng ko rút gọn (Tránh học sinh nhầm lẫn công thức giữa 2 dạng này, công thức nghiệm rút gọn chỉ áp dụng trong trường hợp hệ số b là số chẵn, còn công thức nghiệm tổng quát có thể áp dụng cho mọi phương trình)\par
+
+\   
+
+B1: Tính $\Delta = b^2 - 4ac$ \par
+B2: Nếu $\Delta > 0$ phương trình có 2 nghiệm phân biệt : \par
+$x_1 = \dfrac{-b + \Delta}{2a}$ và $x_2 = \dfrac{-b - \Delta}{2a}$ \par
+Nếu $\Delta = 0$ phương trình có nghiệm kép $x_1 = x_2 = -\dfrac{b}{2a}$ \par
+Nếu $\Delta < 0$ phương trình vô nghiệm. \par
+
+\    
+
+3. Công thức nhẩm nhiệm : \par
+Nếu : $a + b + c = 0$ thì phương trình có 2 nghiệm : $x_1 = 1, x_2 = \dfrac{c}{a}$ \par
+Nếu : $a - b + c = 0$ thì phương trình có 2 nghiệm : $x_1 = -1, x_2 = -\dfrac{c}{a}$ \par
+
+\   
+4. Hệ thức Viét : \par
+\begin{cases}
+    x_1 + x_2 = -\dfrac{b}{a} \\
+    x_1.x_2 = \dfrac{c}{a}
+\end{cases}
+
+\underline{Bài tập áp dụng :} \par
+A. Cho phương trình sau : $x^2 - 8x + 15 = 0$. Không giải phương trình, hãy tính : \par
+
+\begin{multicols}{3}
+1. $x_1 - x_2$ \par
+2. $x_1^2 - x_2^2$ \par
+3. $x_1^3 - x_2^3$ \par
+\columnbreak
+4. \dfrac{1}{x_1} + \dfrac{1}{x_2} \par
+5. \dfrac{1}{x_1 - 1} + \dfrac{1}{x_2 - 1} \par
+6. \dfrac{x_1}{x_2} + \dfrac{x_2}{x_1} \par
+\columnbreak
+7. x_1^6 - x_2^6 \par
+8. \dfrac{1 - x_1}{x_1} + \dfrac{1 - x_2}{x_2} \par
+9. \dfrac{x_1}{x_2 + 1} + \dfrac{x_2}{x_1 + 1} \par
+\end{multicols}
+
+\begin{multicols}{3}
+
+10. |x_1 - x_2| \par
+11. x_1^4 + x_2^4 \par
+12. (3x_1 + x_2)(3x_2 + x_1) \par
+
+\columnbreak
+
+13. x_1^3 + x_2^3 \par
+14. (x_1 + x_2)^3 \par
+15. (x_1 - x_2)^3 \par
+
+\columnbreak
+
+16. x_1^3 + x_2^3 \par
+17. x_1^4 - x_2^4 \par
+18. \dfrac{6x_1^2 + 10x_1x_2 + 6x_2^2}{5x_1x_2^3 + 5x_1^3x_2} \par
+
+\end{multicols}
+
+B. Tìm giá trị tham số m để phương trình bậc 2 có 2 nghiệm thoả yêu cầu bài toán:
+
+
+\subsection{Dạng toán ứng dụng thực tế}
+
+\subsubsection{Bài toán bán hàng giảm giá}
+
+\subsubsection{Bài toán chia thưởng, từ thiện, ...}
+
+\subsubsection{Bài toán gửi/vay tiền ngân hàng}
+
+\subsubsection{Bài toán chuyển động}
+1. Một ô tô đi từ A đến B cùng một lúc. Ô tô thứ hai đi từ B đến A với vận tốc bằng $\dfrac{2}{3}$ vận tốc ô tô thứ nhất. Sau 5 giờ chúng gặp nhau. Hỏi mỗi ô tô đi cả quãng đương AB mất bao lâu. \par
+
+\   
+
+2. Một ô tô du lịch đi từ A đến C. Cùng lúc từ địa điểm B nằm trên đoạn AC có một ô tô vận tải cùng đi đến. Sau 5 giờ hai ô tô gặp nhua tại C. Hỏi ô tô du lịch đi từ A đến B mất bao lâu, biết rằng vận tốc của ô tô tải bằng $\dfrac{3}{5}$ vận tốc của ô tô du lịch. \par
+
+\    
+
+\subsubsection{Bài toán làm cùng công việc}
+
+\subsubsection{Bài toán thấu kính, mắt ...}
+
+\subsubsection{Bài toán tính tuổi}
+
+\subsubsection{Bài toán tính diện tích các hình đặc biệt, viên phân, mảnh đất, khu vườn, lát gạch, sơn nhà, ...}
+
+\subsubsection{Bài toán pha chế dung dịch ...}
+
+\subsubsection{Bài toán cân bằng nhiệt lượng}
+
+\subsubsection{Bài toán tính chiều cao toà nhà, cái cây, tháp, ... áp dụng kiến thức hệ thức lượng}
+
+\subsubsection{Bài toán hình học}
+
+\underline{- Chứng minh tứ giác nội tiếp} \par
+
+\underline{- Chứng minh 2 tam giác đồng dạng} \par
+
+\underline{- Chứng minh đăng thức hình học} \par
+
+\underline{- Chứng minh 3 đường thẳng đồng quy} \par
+
+\underline{- Chứng minh 2 góc bằng nhau} \par
+
+\underline{- Chứng minh 2 đoạn thẳng bằng nhau} \par
+
+\underline{- Chứng minh 3 điểm thẳng hàng} \par
+
+\underline{- Chứng minh tia phân giác} \par
+
+\underline{- Chứng minh đường trung trực} \par
+
+\underline{- Chứng minh 2 đường thẳng song song} \par
+
+\underline{- Chứng minh 2 đường thẳng vuông góc} \par
+
+\underline{- Chứng minh diện tích hình giới hạn bởi ..., diện tích viên phân, ...} \par
+
+\underline{- Tính chu vi, độ dài cung ...} \par
+
+\     
+
+\break  
+
+\section{Phần đề}
+
+\subsection{Đề 1}
+''''''\textbf{Câu 1:} Giải phương trình sau : \par
+a) $x^4-3x^2+2=0$ \par
+b) $x^2 - (\dfrac{x}{x-1})^2 = 0$ \par
+c)  \begin{align}
+    \begin{cases}
+        \dfrac{-3}{x-y}+\dfrac{2}{2x+y}=-2 \\
+        \dfrac{4}{x-y}-\dfrac{10}{2x+y}=2 \\
+    \end{cases}
+\end{align}
+ 
+\textbf{Câu 2:} Cho đồ thị hàm số $y=f(x)=\dfrac{1}{2}x^2 (P)$ \par
+a) Chứng minh đường thẳng $y=g(x)=2x-2 (d_1)$ luôn tiếp xúc với (P). Tìm toạ độ tiếp điểm.\par
+b) Tìm m để phương trình $y=h(x)=3mx-1 (d_2)$ luôn cắt đồ thị (P) tại 2 điểm phân biệt \par
+
+\
+
+\textbf{Câu 3:} Cho phương trình $3x^2 + mx + 2 = 0$ \par
+a) Tìm giá trị của m để phương trình luôn có 2 nghiệm phân biệt.\par
+b) Không giải phương trình, tìm giá trị của m để thoả đẳng thức sau : \par
+
+\begin{align}
+\dfrac{2x_1-1}{x_2} + \dfrac{2x_2-1}{x_1}=\dfrac{41}{6} 
+\end{align}
+
+\
+
+\textbf{Câu 4:} Trước nhà bạn Tân có một cây cột điện cao 9m bị cơn bão số 10 vừa qua làm cho gãy ngang thân, ngọn cây cột điện chạm mặt đất cách gốc 3m. Hỏi điểm gãy ngang của cây cột điện cách gốc bao nhiêu ? \par
+
+\ 
+
+\textbf{Câu 5:} Trong một giờ thực hành hoá nhóm bạn Tâm, Hậu, Lan, Hà đã thực hiện một thí nghiệm như sau: Cho 200g dung dịch NaOH nồng độ 4\% vào 250g dung dịch NaOH nồng độ 8\% . Hỏi sau khi nhóm bạn thực hiện xong thí nghiệm sẽ thu được dung dịch NaOH có nồng độ bao nhiêu ? \par
+
+\ 
+
+\textbf{Câu 6:} Một ô tô dự định đi từ A đến B trong thời gian nhất định nếu xe chạy với vận tốc 35km/h thì đến chậm mất 2 giờ. Nếu xe chạy với vận tốc 50 km/h thì đến sớm hơn 1 giờ. Tính quãng đường AB và thời gian dự định đi lúc đầu. \par
+
+\ 
+
+\textbf{Câu 7:} Cho $\Delta ABC$ có 3 góc nhọn, nội tiếp $(O; R)$. Vẽ đường cao AD và BM cắt nhau tại H, tia AD cắt (O) tại E, tia BM cắt (O) tại F \par
+a) Chứng minh: ABDM nội tiếp \par
+b) Chứng minh: MD//EF \par
+c) Chứng minh: $\Delta CEF$ cân \par
+d) Tính diện tích viên phân tạo bởi dây AC và cung nhỏ AC, biết \widehat{DMC} = \ang{ 60} 
+
+\break
+
+\subsection{Đề 2}
+
+'''''\textbf{Câu 1:} Giải phương trình sau : \par
+a) $(x+2)^2 - 3x -5 = (1-x)(1+x)$ \par
+b) \dfrac{x^2+3x+2}{2x+3} = \dfrac{2x+5}{4} \par
+c) \begin{align}
+    \begin{cases}
+    \sqrt{x+1} + 2\sqrt{y-1} = 8\\
+    3\sqrt{x+1} - \sqrt{y-1} = 3\\
+    \end{cases}
+\end{align}
+
+\textbf{Câu 2:} Cho đồ thị hàm số $y=f(x)=-x^2(P)$ \par
+a) Vẽ đồ thị hàm số $f(x)$ \par
+b) Tìm phương trình đường thẳng $(D')$ có đồ thị song song với đồ thị hàm số $y=g(x)=-2x + 3 (D)$ và tiếp xúc với $(P)$
+
+\ 
+
+\textbf{Câu 3:} Cho phương trình $x^2+mx-6=0$ \par
+a) Tìm m để phương trình có nghiệm \par
+b) Tìm m để phương trình có 2 nghiệm $x_1$, $x_2$ thoả : \par
+
+\begin{align}
+\dfrac{x_1}{x_2-1} + \dfrac{x_2}{x_1-1} = \dfrac{-7}{2}
+\end{align}
+
+\ 
+
+\textbf{Câu 4:} Hai đội công nhân cùng làm một đoạn đường trong 24 ngày thì xong. Mỗi ngày phần việc đội A làm gấp rưỡi đội B. Hỏi nếu làm một mình thì mỗi đội cần bao nhiều ngày để hoàn thành đoạn đường đó \par
+
+\
+
+\textbf{Câu 5:} Trên một cách đồng cấy 60 ha lúa giống mới, 40 ha lúa giống cũ. Thu hoạch được tất cả 460 tấn thóc. Hỏi năng suất mỗi loại lúa trên 1 ha là bao nhiêu biết rằng 3 ha trồng lúa mới thu hoạch được ít hơn 4 ha trồng lúa cũ là 1 tấn. \par
+
+\
+
+\textbf{Câu 6:} Hai chiếc cọc cao 10m và 30m lần lượt đặt tại 2 vị trí A. B. Biết khoảng cách giữa 2 cọc bằng 24m. Người ta chọn một cái chốt ở vị trí M trên mặt đất nằm giữa hai chân cột để giăng dây nối đến 2 đỉnh C, D của cọc như hình vẽ. Hỏi ta phải đặt chốt ở vị trí nào để tổng độ dài của hai sợi dây đó là ngắn nhất 
+\begin{align}
+    \includegraphics[width=5cm]{hinh-hoc-de2.png}
+\end{align}
+
+\
+
+\textbf{Câu 7:} Cho $\Delta ABC$ (AB<AC) có 3 góc nhọn nội tiếp đường tròn (O). Ba đường cao AD, BE, CF của tam giác ABC cắt nhau tại H. Đường thẳng EF cắt đường tròn (O) tại M, N ( E nằm giữa M, F). Chứng minh : \par
+a) Tứ giác BCEF nội tiếp \par
+b) DA.DH = DB.DC \par
+c) $\Delta AMN$ cân \par
+d) AM^2 = AH.AD
+
+\break
+
+\subsection{Đề 3}
+
+\textbf{Câu 1:} Giải phương trình và hệ phương trình sau: \par
+a) $(x-3)^4=4$ \par
+b) $4x^4-5x-9=0$ \par
+c) 
+\begin{align}
+   \begin{cases}
+   x+2y=4 \\
+   y-3x=7
+   \end{case}
+\end{align}
+
+\textbf{Câu 2:} Cho đồ thị hàm số $y=f(x)=ax^2 (P)$ và $y=h(x)=4x-1 (d)$ \par
+a) Tìm a sao cho (P) và (d) tiếp xúc \par
+b) Vẽ độ thị 2 hàm số $f(x)$, $h(x)$ trên cùng một hệ trục toạ độ Oxy \par
+c) Tìm khoảng cách từ giao điểm 2 đồ thị tới gốc toạ độ.
+
+\
+
+\textbf{Câu 3:} Cho phương trình $x^2 - 2(m-1)x + m - 4 = 0$ \par
+a) Tìm m để có 2 nghiệm trái dấu \par
+b) Không giải phương trình tìm m để phương trình có 2 nghiệm thoả :
+\begin{center}
+    $x_2(x_1-1)+x_1(x_2-1) = -6$
+\end{center}
+
+\
+
+\textbf{Câu 4:} Tìm số học sinh lớp 7A và 7B biết số học sinh lớp 7B ít hơn lớp 7A là 5 học sinh và tỉ số học sinh lớp 7A:7B là 7:6. \par
+
+\
+
+\textbf{Câu 5:} Tìm 2 số biết tổng của chúng là 10 và tích của chúng bằng 21.
+
+\
+
+\textbf{Câu 6:} Tính diện tích phần có màu xám trong hình sau, biết : \par
+
+\begin{center}
+    \includegraphics[width=5cm]{de-3-5.png}
+\end{center}
+
+\
+
+\textbf{Câu 7:} Cho $\Delta{ABC}$ vuông tại A. Trên AC lấy một điểm M và vẽ đường tròn đường kính MC. Kẻ MB cắt đường tròn tại D. Đường thẳng DA cắt đường tròn tại S. Chứng minh:
+\newline
+\newline a) ABCD là tứ giác nội tiếp
+\newline 
+\newline b) AS.AD = AM.AC
+\newline
+\newline c) CA là tia phân giác $\widehat{SCB}$
+
+\break
+
+\subsection{Đề 4}
+
+\textbf{Câu 1:} Giải phương trình và hệ phương trình sau:\par
+a) \dfrac{9}{x+1} + \dfrac{2}{x-4} = \dfrac{11}{x} \par
+b) 3x^4 - x^2 - 10 = 0 \par
+c)
+\begin{align}
+        \begin{cases}
+        2x + 3y = 5 \\
+        4x + 6y = 10
+        \end{cases}
+\end{align}
+
+\textbf{Câu 2:} Cho parabol (P) : $y = x^2$ và đường thẳng $(d)$ : y = 4x - m^2 + 16 \par
+a) Tìm toạ độ giao điểm của $(P)$ và $(d)$ khi m = 2 \par
+b) Tìm m để $(d)$ cắt $(P)$ tại hai điểm nằm về 2 phía của trục tung
+
+\
+
+\textbf{Câu 3:} Cho phương trình : $x^2-2(m-5)x-4m+1=0$ (x là ẩn, m là tham số) \par
+a) Chứng minh phương trình luôn có 2 nghiệm phân biệt với mọi m \par
+b) Gọi $x_1$, $x_2$ là hai nghiệm của phương trình. Tìm hệ thức độc lập liên hệ giữa $x_1$, $x_2$ không phụ thuộc vào m. \par
+c) Tìm m để : 2x_1^2+2x_2^2+x_1^2.x_2+x_1.x_2^2=6
+
+\
+
+\textbf{Câu 4:} Một phân xưởng cơ khí theo kế hoạch cần phải sản xuất 1100 sản phẩm trong một số ngày quy định. Do mỗi ngày phân xưởng đó sản xuất vượt mức 5 sản phẩm nên đã hoàn thành sớm hơn thời gian quy định 2 ngày. Tìm số sản phẩm theo kế hoạch mà mỗi ngày phân xưởng này phải sản xuất.
+
+\
+
+\textbf{Câu 5:} Một người gửi 2 triệu đồng vào một ngân hàng loại kí hạn 3 tháng với lãi suất 5,2\%/ năm (lãi kép). Hỏi sau 1 năm, người đó nhận được bao nhiêu tiền cả vốn lẫn lãi, biết rằng người đó không rút lãi ở tất cả các định kì trước đó ? \par
+(Giải thích : Lãi kép là hình thức lãi có được do cộng dồn tiền lãi tháng trước vào tiền gốc thành vốn mới và tiếp tục gửi cho tháng sau) \par
+
+\
+
+\textbf{Câu 6:} Một cửa sổ có dạng như hình vẽ, bao gồm:một hình chữ nhật ghép với 1/2 hình tròn có tâm nằm trên cạnh hình chữ nhật. biết rằng chu vi cho phép của cửa sổ là 4m và hình chữ nhật có chiều dài bằng 2 lần chiều rộng. Hỏi diện tích của cửa sổ là bao nhiêu ?
+
+\begin{center}
+    \includegraphics[width=5cm]{de4-6.png}
+\end{center}
+
+\textbf{Câu 7:} Cho $\Delta ABC$ nhọn $(AB<AC)$ nội tiếp đường tròn (O) có 2 đường cao BD và CE.\par
+a) Chứng minh tứ giác BEDC nội tiếp và \Delta ABC \backsim \Delta ADE \par
+b) Tiếp tuýên tại B và C của đường tròn (O) cắt nhau tại M, OM cắt BC tại H. Chứng minh AB.BH = AD.BM. \par
+c) Chứng minh \Delta ADH \backsim \Delta ABM. \par
+d) AM cắt DE tại I. Chứng minh I là trung điểm của DE.
+
+\break
+
+\subsection{Đề 5}
+
+\textbf{Câu 1:} Giải phương trình sau:\par
+a) \dfrac{1}{x-1} - \dfrac{3x^2}{x^3-1} = \dfrac{2x}{x^2+x+1} \par
+b) 5x^2+2x=4-x \par
+c) (2x^2+x-4)^2-(2x-1)^2=0 
+ 
+\   
+
+\textbf{Câu 2:} 
+a) Vẽ đồ thị hàm số (P) : y=-\dfrac{x^2}{4}. \par
+b) Tìm m để (P) cắt đường thẳng (D): y=2x-m tại điểm có hoành độ x=1. \par
+
+\   
+
+\textbf{Câu 3:} Cho phương trình x^2-(m-1)x-m^2+m-2=0.(1) \par
+a) Giải phương trình (1) khi m=-1. \par
+b) Chứng minh rằng phương trình (1) có nghiệm với mọi m. \par
+c) Gọi $x_1$, $x_2$ là 2 nghiệm của phương trình. Tìm m để biểu thức $A=x_1^2+x_2^2$ đạt giá trị nhỏ nhất \par
+
+\   
+
+\textbf{Câu 4:} Trong kì thi học sinh giỏi cấp quận giải truyền thông Lương Thế Vinh năm học 2017 - 2018, một trường THCS ở quận 9 có 105 học sinh tham dư, nhà trường đã tổ chức xe đưa đón học sinh dự thi bằng 3 xe ô tô. Biết rằng xe thứ I chở nhiều hơn xe thứ III là 12 học sinh, xe thứ II chở nhiều hơn xe thứ I là 6 học sinh. Hỏi mỗi xe chở bao nhiêu học sinh (không có học sinh nào đi xe riêng) \par
+
+\multicols{2} 
+
+\textbf{Câu 5:} Một người mua một món hàng và phải trả tổng cộng 2.915.000 đồng kể cả thuế giá trị gia tăng (VAT) là 10 \%. Hỏi nếu không kể thuế VAT thì người đó phải trả bao nhiêu tiền cho món hàng.
+
+\   
+
+\textbf{Câu 6:} Tính chiều cao của một cây xanh biết rằng một người cao 1,7m đứng nhìn lên đỉnh cây thì hướng nhìn tạo với mặt đất một góc 35\textdegree và khoảng cách từ người đó đến cây là 20m (làm tròn đến chữ số thập phân thứ 3)
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=8cm]{de-5-6.png}
+\end{center}
+
+\end{multicols}  
+
+\textbf{Câu 7:} Cho nửa đường tròn (O;R) đường kính AB. Gọi Ax, By là 2 tiếp tuyến của nửa đường tròn, C là điểm nằm trên nửa đường tròn sao cho $\widehat{CAB} = 30$\textdegree. Tiếp tuyến kẻ từ C của 1/2 đường tròn (O) là điểm nằm trên nửa đường tròn (O) cắt Ax và By lần lượt ở D và E.\par
+1. Chứng minh các tứ giác AOCD và BOCE là các tứ giác nội tiếp. \par
+2. Đường thẳng kẻ từ C vuông góc By tại F cắt OD tại K. Chứng minh AK vuông góc với DE. \par
+3. Tính diện tích hình giới hạn bởi hai đoạn thẳng CF, BF và cung BC của đường tròn (O) theo R.
+
+\break
+
+\subsection{Đề 6}
+
+\textbf{Câu 1:} Giải phương trình, hệ phương trình sau:\par
+a) \dfrac{12}{8+x^3} = 1 + \dfrac{1}{x+2} \par
+b) (3x^2-5x+1)(x^2-4)=0 \par
+c) 0,3x^4+1,8x^2+1,5=0 
+
+\   
+
+\textbf{Câu 2:} Cho parabol (P) : $y=x^2$ và đường thẳng (d): y=-x+2 \par
+1. Vẽ đồ thị của (P) và (d) trên cùng một hệ trục toạ độ. \par
+2. Bằng phép tính hãy xác định toạ độ giao điểm A, B của 2 đồ thị (P) và (d). \par
+3. Tìm toạ độ điểm M trên cung AB của đồ thị (P) sao cho 
+$\Delta AMB$ có diện tích lớn nhất 
+
+\    
+
+\textbf{Câu 3:} Cho phương trình $x^2-2mx+m-2=0 (1)$ (x là ẩn số) \par
+a) Chứng minh phương trình (1) luôn có 2 nghiệm phân biệt với mọi giá trị m. \par
+b) Định m để hai nghiệm $x_1,x_2$ của phương trình (1) thoả mãn : $$(1+x_1)(2-x_2)+(1+x_2)(2-x_1)=x_1^2+x_2^2+2$
+
+\    
+
+\textbf{Câu 4:} Sau 2 năm số dân thành phố tăng từ 2000000 lên 2020050 người. Hỏi trung bình mỗi năm dân số thành phố tăng bao nhiêu phần trăm ?
+
+\   
+
+\textbf{Câu 5:} Một phòng họp có 360 ghế ngồi được xếp thành từng hàng và số ghế ở mỗi hàng bằng nhau. Nếu số hàng tăng thêm 1 và số ghế ở mỗi hàng tăng thêm 1 thì trong phòng có 400 ghế. Hỏi có bao nhiêu hàng, mỗi hàng có bao nhiêu ghế ?
+
+\    
+
+\textbf{Câu 6:} Một chiếc thang gập dài 12m gập đôi thành hình chữ A dùng để leo lên mái nhà sửa lại lớp tôn bị dột, biết góc tạo bởi mặt đất và chân thang là 60\textdegree. Tính chiều cao từ mặt đất lên mái nhà.
+
+\   
+
+\textbf{Câu 7:} (Dạng nhật biết hình, tìm điều kiện của một hình) \par
+Cho tam giác đều ABC nội tiếp đường tròn tâm O. D và E lần lượt là điểm chính giữa của các cung AB và AC. DE cắt AB ở I và cắt AC ở L \par
+a) Chứng minh : DI=IL=LE \par
+b) Chứng minh tứ giác BCED là hình chữ nhật. \par
+c) Chứng minh tứ giác ADOE là hình thoi và tính các góc của hình này. \par
+
+\break
+
+\subsection{Đề 7}
+
+\textbf{Câu 1:} Giải phương trình, hệ phương trình sau: \par
+a) \dfrac{x+2}{x-2}-\dfrac{2}{x^2-2x}=\dfrac{1}{x}} \par
+b) $2x^2+x-\sqrt{3}=\sqrt{3}x+1$ \par
+c) \begin{align}
+    \begin{cases}
+    3x+y=5 \\
+    5x+2y=6
+    \end{cases}
+\end{align}
+
+\   
+
+\textbf{Câu 2:} \par
+a) Vẽ đồ thị hàm số : $y=\dfrac{1}{2}x^2$ \par
+b) Cho hàm số bậc nhất y=a-2. Hãy xác định hệ số a biết rằng $a>0$ và đồ thị hàm số cắt trục hoành Ox và trục tung Oy lần lượt tại 2 điềm A, B sao cho OB=2OA (Với O là gốc toạ độ)
+
+\   
+
+\textbf{Câu 3:} Cho phương trình $x^2-x-n+1=0$ (tham số n) \par
+a) Tìm điều kiện của tham số n sao cho phương trình có 2 nghiệm. \par
+b) Tìm n để phương trình có 2 nghiệm thoả : $$4(\dfrac{1}{x_1} + \dfrac{1}{x_2})-x_1x_2+3=0$
+
+\textbf{Câu 4:} Một xe lửa đi từ Hà Nội vào Bình Sơn ( Quảng Ngãi). Sau đó 1 giờ, một xe lửa khác đi từ Bình Sơn ra Hà Nội với vận tốc lớn hơn vận tốc của xe thứ nhất là 5km/h. Hai xe gặp nhau tại 1 ga chính giữa quãng đường. Tìm vẫn tốc mỗi xe, giả thiết rằng quãng đường Hà Nội - Bình Sơn dài 900km.
+
+\   
+
+\textbf{Câu 5:} Nhà Lan có một mảnh vườn trồng rau cải bắp. vườn được đánh thành nhiều luống, một luống trồng cùng một số cây cải bắp. Lan tính rằng : Nếu tăng thêm 8 luống rau, nhưng mỗi luống trồng ít đi 3 cây, thì số cây toàn vườn ít đi 54 cây. Nếu giảm đi 4 luống, nhưng mỗi luống trồng tăng thêm 2 cây thì số rau toàn vườn sẽ tăng thêm 32 cây. Hỏi vườn lan trồng bao nhiêy cây rai cải bắp (Số cây trong các luống như nhau)
+
+\   
+
+\textbf{Câu 6:} Khoảng cách từ thuỷ tinh thể đến màng lưới là không đổi và bằng 2cm. Hãy tính độ thay đổi tiêu cự của thể thuỷ tinh khi chuyển từ trạng thái nhìn một vật ở rất xa sang trạng thái nhìn một vật cách mắt 50cm.
+
+\begin{center}
+    \includegraphics[width=5cm]{de7-7.png}
+\end{center}
+
+\   
+
+\textbf{Câu 7:} (Dạng toán về tính số đo góc và số đo diện tích) \par
+Cho 2 đường tròn (O;3cm) và (O';1cm) tiếp xúc ngoài tại A. Vẽ tiếp tuyến chung ngoài BC (B \in (O); C \in (O')). \par
+a) Chứng minh rằng $\widehat{O'OB} = \ang{60}$ \par
+b) Tính độ dài BC. \par
+c) Tính diện tích hình giới hạn bởi tiếp tuyến BC và các cung AB, AC của hai đường tròn.
+
+\break
+
+\subsection{Đề 8}
+
+\textbf{Câu 1:} Giải phương trình, hệ phương trình sau:\par
+a) 7x^2+2\sqrt{7}x+1=0 \par
+b) \dfrac{2}{x-1}=1+ \dfrac{1}{x+2} \par
+c) \sqrt{x+1}=x-1
+
+\   
+
+\textbf{Câu 2:} Cho parabol (P) : $y=\dfrac{1}{2}x^2$ và 2 điểm A, B thuộc (P) có hoành độ lần lượt là : -1, -2. .Đường thẳng (d) có phương trình y=mx+n.\par
+1. Tìm toạ độ hai điểm A, B. Tìm m, n biết (d) đi qua hai điểm A, B. \par
+2. Tính độ dài đường cao OH của $\Delta OAB$ ( điểm O là gốc toạ độ)
+
+\textbf{Câu 3:} Cho phương trình (ẩn x): $x^2-2(m+1)x+m^2+2=0$  \par
+1. Giải phương trình đã cho khi m=1. \par
+2. Tìm giá trị của m để phương trình đã cho có 2 nghiệm phân biệt $x_1, x_2$ thoả mãn hệ thức : $x_1^2+x_2^2=10$
+
+\   
+
+\textbf{Câu 4:} Hai vật chuyển động trên cùng một đường tròn có đường kính 20m, xuất phát cùng một lúc từ cùng một điểm. Nếu chúng chuyển động ngược chiều nhau thì cứ 2 giây lại gặp nhau. Nếu chúng chuyển động cùng chiều nhau thì cứ sau 10 giây lại gặp nhau. Tính vận tốc của mỗi vật
+
+\   
+
+\textbf{Câu 5:} Một nhà máy dự định sản xuất chi tiết máy trong thời gian đã định và dự định sẽ sản xuất được 300 chi tiết máy trong một ngày. Nhưng thực tế mỗi ngày đã làm thêm được 100 chi tiết, nên đã sản xuất thêm được tất cả là 600 chi tiết vf hoàn thành kế hoạch trước 1 ngày.Tính số chi tiết máy dự định sản xuất.
+
+\   
+
+\textbf{Câu 6:} Để đo khoảng cách từ bờ biển đến đảo, 2 người đó đứng cách nhau 50m và đường thẳng nối mỗi người tới đảo lần lượt tạo với đường thẳng nối 2 người đó một góc lần lượt là 30m và 40m
+
+\begin{center}
+    \includegraphics[width=8cm]{de8-7.png}
+\end{center}
+\  
+
+\textbf{Câu 7:} (Chứng minh nội tiếp, chứng minh nhiều điểm cùng nằm trên một đường tròn. \par
+Từ một điểm A, B, C cố định với B nằm giữa A và C. Một đường tròn (O) thay đổi đi qua B và C. Vẽ đường kính MN vuông góc với BC tại D ( M nằm trên cung nhỏ BC). Tia AN cắt đường tròn (O) tại một điểm theo thứ hai là F. Hai dây BC và MF cắt nhau tại E. Chứng minh rằng : \par
+a) Tứ giác DEFN nội tiếp được. \par
+b) AD.AE=AF.AN \par
+c) Đường thẳng MF đi qua một điểm cố định.
+
+\break
+
+\subsection{Đề 9}
+
+\textbf{''''''Câu 1:} Cho hàm số $y = \dfrac{1}{2}x^2$ có đồ thị là  (P) \par
+a) Vẽ (P) \par
+b) Tìm m đường thẳng  (D): $y = mx - 4$ cắt (P) tại điểm A có hoành độ bằng -6.
+
+\    
+
+\textbf{Câu 2:} Cho phương trình : $x^2 + 5x + m - 2 = 0$ (m tham số) \par
+1. Giải phương trình khi m = -12. \par
+2. Tìm m để phương trình có hai nghiệm phân biệt $x_1, x_2$ thoả mãn : $$\dfrac{1}{x_1 - 1}+\dfrac{1}{x_2 - 1}=2$
+
+\   
+
+\textbf{Câu 4:} Bạn Minh được mời qua nhà bạn Bình chơi, bạn Bình đã nói số nhà cho Minh, nhưng Minh quên, mà điện thoại lại hết pin, Minh chỉ nhớ số nhà gồm 2 chữ số, mà 2 lần chữ số hàng đơn vị lớn hơn chữ số hàng chục 1 đơn vị và nếu 2 chữ số ấy viết theo chiều ngược lại thì được 1 số mới(có 2 chữ số) bé hơn số cũ 27 đơn vị. Hãy giúp Minh tìm ra số nhà của Bình.
+
+\   
+
+\textbf{Câu 5:} Lớp 8A có số học sinh namb bằng $\dfrac{11}{13}$ số học sinh nữ và có ít hơn số học sinh nữ 4 học sinh. Hỏi lớp 9A có bao nhiêu học sinh? \par
+
+\     
+
+\textbf{Câu 6:} Hai thanh hợp kim đồng - kẽm có tỉ lệ khác nhau. Thanh thứ nhất có khối lượng 10kg có tỉ lệ đồng : kẽm = 4:1. Thanh thứ 2 có khối lượng 16kg có tỉ lệ đồng - kẽm là 1:3. Người ta bỏ hai thanh đó vào lò luyện kim và cho thêm một lượng đồng nguyên chất để được một loại hợp kim đồng kẽm là 3:2. Tính khối lượng hợp kim mới nhận được. \par
+
+\    
+
+\textbf{Câu 7:} Để đẩy một hòn đá có khối lượng 50kg từ mặt đất lên độ cao 0,4m. Người công nhân dùng lực là 200N theo phương thẳng đứng. Tay người đó dịch chuyển một đoạn bằng bao nhiêu ? \par
+
+\    
+
+\textbf{Câu 8:} Cho đường tròn (O) có tâm O và điểm M nằm ngoài đường tròn (O). Đường thẳng MO cắt (O) tại E và F (ME < MF). Vẽ cắt tuyến MAB và tiếp tuyến MC của (O) (C là tiếp điểm, A nằm giữa hai điểm M và B, A và C nằm khác phía đối với đường thẳng MO). \par
+a) Chứng minh $MA.MB = ME.MF$ \par
+b) Gọi H là hình chiếu vuông góc của điểm D lên đường thẳng MO. Chứng minh tứ giác AHOB nội tiếp. \par
+c) Trên nửa mặt phẳng bờ MO có chứa điểm A, vẽ nửa đường tròn đường kính MF, nửa đường tròn nằy cắt tiếp tuyến tại E của (O) ở K. Gọi S là giao điểm của hai đường thẳng CO và KF. Chứng minh rằng đường thẳng MS vuông góc với đường thẳng KC.
+
+\break
+
+\subsection{Đề 10}
+
+\textbf{'''''Câu 1:} Cho parabol (P): $y = \dfrac{-1}{2}x^2$ và đường thẳng (d): $y = 3x + 4$ \par
+a) Vẽ đồ thị (P) và (d) trên cùng mặt phẳng toạ độ Oxy. \par
+b) Tìm toạ độ giao điểm của (P) và (d) bằng phép tính. \par
+
+\    
+
+\textbf{Câu 2:} Cho phương trình: $x^2 - 2(m + 1)x + m - 5 = 0$ (m là tham số) \par
+a) Chứng minh phương trình luôn có 2 nghiệm phân biệt $x_1, x_2$ với mọi m \par
+b) Tìm m để phương trình có hai nghiệm $x_1, x_2$ thoả mãn : $$(x_1 + 1)^2.x_2 + (x_2 + 1)^2.x_1 + 16 = 0$ \par
+
+\     
+
+\textbf{Câu 3:} Do các hoạt động công nghiệp thiếu kiểm soát của con người làm cho nhiệt độ Trái Đất tăng dần một cách rất đáng lo ngại. Các nhà khoa học đưa ra công thức dự báo nhiệt độ trung bình trên bề mặt Trái Đất như sau : $T = 0,02t + 15$. \par 
+Trong đó: T là nhiệt độ trung bình của bề mặt Trái Đất tính theo độ C; t là số năm kể từ năm 1950. Dùng công thức trên : \par
+a) Em hãy nêu tốc độ tăng nhiệt độ trung bình của bề mặt Trái Đất tính theo độ C; t là số năm kể từ năm 1950 \par
+b) Hãy tính xem nhiệt độ trung bình của bề mặt Trái Đất vào năm 2080 là bao nhiêu ? 
+
+\    
+
+\textbf{Câu 4:} Lúc 6h45' phút sáng bạn Nam đi xe đạp điện tử từ nhà tới trường với vận tốc trung bình là 15km/h bạn đi theo con đường từ A->B->C->D->E->G->H như trong hình. Nếu có 1 con đường thẳng từ A->H và đi theo con đường đó với vận tốc trung bình 15km/h, bạn Nam sẽ tới trường lúc mấy giờ ? \par
+
+\   
+
+\textbf{Câu 5:} Thực hiện chương trình khuyến mãi tri ân khách hàng, một siêu thị điện máy khuyến mãi giảm giá 15\% trên 1 chiếc ti vi. Sau đó để thu hút khách hàng, siêu thị lại giảm thêm 10\% nữa (so với giá đã giảm lần 1) nên giá bán của chiếc ti vi lúc này là 11475000 đồng. \par
+a) Hỏi giá bán ban đầu của 1 chiếc ti vi nếu không khuyến mãi là bao nhiêu. \par
+b) Biết rằng giá vốn là 10500000 đồng/chiếc tivi. Hỏi nếu bán hết 20 chiếc ti vi trong đợt khuyến mãi thứ 2 thì siêu thị lời bao nhiêu tiền ? \par
+
+\    
+
+\textbf{Câu 6:} Người lớn tuổi thường đeo kính lão (một loại thấu kính hội tụ). bạn An mượn kính của bà để làm thí nghiệm tạo hình ảnh một vật trên tấm màn. Cho rằng vật sáng có hình đoạn thẳng AB đặt vuông góc với chục chính thấu kính hội tụ, cách thấu kính đoạn OA = 30cm. Thấu kính có quang tâm O và tiêu điểm F. Qua thấu kínhcos quang tâm O và tiêu điểm F. Qua thấu kính vật AB cho ảnh thật A'B' lớn gấp 2 lần vật (có đường đi của tia sáng được mô tả như hình vẽ). Tính tiêu cự của thấu kính. \par
+
+\    
+
+\textbf{Câu 7:} Nước muối sinh lí (NaCl)là dung dịch có nồng độ 0.9\%, tức là trong 1000ml nước muối sinh lí có 9g muối tinh khiết. Ta cần đổ thêm bao nhiêu lít nước tinh khiết vào 9kg dung dịch 3.5\% để có được dung dịch nước muối sinh lí.
+
+\    
+
+\textbf{Câu 8:} Cho nửa đường tròn tâm (O) đường kính AB. Từ điểm M trên tiếp tuyến Ax của nửa đường  vẽ tiếp tuyến  (C là tiếp điểm). Hạ CH vuông góc với AB, đường thẳng MB cắt nửa đường  (O) tại Q và cắt CH tại . Gọi giao điểm MO và AC tại I. Chứng minh rằng :
+\newline a) Tứ giác AMQI nội tiếp
+\newline b) $\widehat{AQI} = \widehat{ACO}$
+\newline c) $CN = NH$
+
+\break
+
+\subsection{Đề 11}
+
+\textbf{'''''Câu 1:} Cho (P) : $y = -\dfrac{x^2}{4}$ và (d) : $y = \dfrac{x}{2} - 2$ \par
+a) Vẽ độ thị hàm số (P) và (d) trên cùng mặt phẳng toạ độ \par
+b) Tìm toạ độ giao điểm của (P) và (d) bằng phép toán \par
+
+\       
+
+\textbf{Câu 2:} Cho phương trình : $x^2 - 2(m - 1)x + 2m - 5 = 0$ (x là ẩn, m là tham số) \par
+a) Chứng minh phương trình trên luôn có 2 nghiệm phân biệt $x_1, x_2$ với mọi giá trị m. \par
+b) Tìm m để $(x_1^2 - 2mx_1 + 2m - 1)(x_2^2 - 2mx_2 + 2m -1) = 2$
+
+\    
+
+\textbf{Câu 3:} Tốc độ của một chiếc ca nô và độ dài đường sóng nước để lại sau đuôi của nó được cho bởi công thức $v = 5\sqrt{d}$. Trong đó d(m) là độ dài đường sóng nước để lại sau đuôi ca nô, v là vận tốc ca nô (m/giây). \par
+a) Tính vận tốc ca nô biết độ dài đường sóng nước để lại sau đuôi ca nô dài $7 + 4\sqrt{3}$ (m). \par
+b) Khi ca nô chạy với vận tốc 54km/giờ thì đường sóng nước để lại sau đuôi ca nô dài bao nhiêu mét ?
+
+\   
+
+\textbf{Câu 4:} Biết rằng 200g một dung dịch chứa 50g muối. Hỏi phải pha thêm bao nhiêu gam nước vào dung dịch đó để được một dung dịch  chứa 20\% muối? \par
+
+\    
+
+\textbf{Câu 5:} Một miếng đất hình tam giác vuông có độ dài đường trung tuyến ứng với cạnh huyền là 10cm và hiệu độ dài hai cạnh góc vuông là 4cm. Tính diện tích miếng đất đó.\par
+
+\    
+
+\textbf{Câu 6:} Học kỳ I trường có 500 học sinh khá và giỏi. Sang học kì II số học sinh khá tăng thêm 2\% còn số học sinh giỏi tăng thêm 4\%  nên tổng số học sinh khá và giỏi là 513 em. Tính số học sinh khá và giỏi của trường học kì I. \par
+
+\   
+
+\textbf{Câu 7:} Bạn An đứng cách một ngọn tháp một khoản 10m. Góc "nâng" là $35^o$ thì An cách tháp bao xa ( biết rằng An tiến tới hoặc lùi lại).
+
+\begin{center}
+    \includegraphics[width=8cm]{de11-7.png}
+\end{center}
+
+\   
+
+\textbf{Câu 8:} Cho $\Delta ABC$ nhọn có (AB > AC) nội tiếp đường tròn (O; 12cm). \par
+a) Giả sử $\widehat{BAC} = 60^o$. Tính diện tích phần hình phẳng giới hạn bởi OB, OC và cung BC nhỏ. \par
+b) Ba đường cao AF, BH, CK của $\Delta ABC$ cắt nhau tại S. \par
+c) Vẽ đường kính AE của (O). Tiếp tuyến tại E của (O) cắt BC tại P, PO cắt AB và AC lần lượt là M và N. Chứng minh: OM = ON.
+
+\break
+
+\subsection{Đề 12}
+
+\textbf{Câu 1:} Cho parabol (P): $y = -x^2$ và đường thẳng (d): $y = x - 2$ \par
+a) Vẽ đồ thị (P) và (d) trên cùng mặt phẳng toạ độ Oxy. \par
+b) Tìm toạ độ giao điểm của (P) và (d) bằng phép tính. \par
+
+\   
+
+\textbf{Câu 2:} Cho phương trình : $x^2 - 2(m + 1)x + m - 5 = 0$ \par
+a) Chứng minh phương trình có 2 nghiệm phân biệt $x_1, x_2$ với mọi m. \par
+b) Tìm m để $(x_1 + 1)^2x_2 + (x_2 + 1)^2x_1 = -16$ \par
+
+\    
+
+\textbf{Câu 3:} Thầy Thưởng vô tình làm rơi một quả banh từ trên tầng thứ 30 của toà nhà chung cư Novaland. Biết độ cao từ nơi thầy Thưởng làm rơi trái banh đến mặt đất là 80m. Quãng đường chuyển động S (mét) của trái banh khi rơi phụ thuộc vào thời gian t (giầy) được cho bởi công thức  : S = 5t^2. \par
+a) Hỏi trái banh cách mặt đất bao nhiêu mét sau 1,5 giây ? sau 3 giầy ? \par
+b) Hỏi sau bao lâu kể từ lúc thầy Thưởng làm rơi thì trái banh chạm mặt đất. Giả sử rằng trái banh rơi theo phương thẳng đứng, bỏ qua mọi lực tác động của môi trường. \par
+
+\    
+
+\textbf{Câu 4:} Vặt sáng AB đặt trước một thấu kính hội tụ, vuông góc với trục chính của một thấu kính hội tụ, cách thấu kính đoạn OB = 20cm. Chiều cao của vật là h = 2cm. Tiêu cự của thấu kính là f = 15cm. Tính khoảng cách từ ảnh đến thấu kính và chiều cao của ảnh. 
+
+\begin{center}
+    \includegraphics[width=7cm]{de12-4.png}
+\end{center}
+
+\textbf{Câu 5:} Một của hàng điện máy thực hiện chương trình khuyến mãi giảm giá tất cả các mặt hàng 10 \% theo giá niêm yết, và nếu hoá đơn khách hàng trên 10 triệu sẽ được giảm thêm 2\% số tiền trên hoá đơn, hoá đơn trên 15 triệu sẽ được giảm thêm 4\% số tiền trên hoá đơn, hoá đơn trên 40 triệu sẽ được giảm thêm 8\% số tiền trên hoá đơn. Ông An muốn mua một ti vi  với giá niêm yết là 9 200 000 đồng và một tủ lạnh với giá niêm yết là 7 100 000. Hỏi với chương trình khuyến mãi của cửa hàng, ông An phải trả bao nhiêu tiền ?
+
+\   
+
+\textbf{Câu 6:} Biết rằng 300g dung dịch chừa 15\% muối. Hỏi phải pha thêm bao nhiêu gam nước vào dung dịch đó để được một dung dịch chứa 10\% muối.
+
+\    
+
+\textbf{Câu 7:} Cho $Delta ABC$ có 3 góc nhọn (AB < AC). Vẽ đường tròn (O) đường kính là BC, cắt AB, AC lần lượt tại N và M. Gọi H là giao điểm của BM và CN, D là giao điểm của AH và BC. \par
+a) Chứng minh AD vuông góc với BC. \par
+b) Chứng minh NC là phân giác của góc MND và tứ giác DOMN nội tiếp. \par
+c) Gọi S là giao điểm của MN và BC. Qua S kẻ tiếp tuyến SK với (O) (Tia SO nằm giữa hai tia SK và SM). Chứng minh ba điểm A, D, K thẳng hàng.
+
+\break
+
+\subsection{Đề 13}
+
+\textbf{'''''Câu 1:(1,5 điểm)} Cho (P): $y = \dfrac{x^2}{4}$ và (d): $y = \dfrac{1}{2}x - 2$. \par
+a) Vẽ (P) và (d) trên cùng một hệ trục toạ độ. \par
+b) Tìm m để đường thẳng ($d_1$) : $y=\frac{1}{4}x + m^2$ cắt  (P) tại 2 điểm phân biệt. \par
+
+\    
+
+\textbf{Câu 2:(1 điểm)} Cho phương trình : $2x^2 + (2m - 1)x + m - 1 = 0$ \par
+a) Chứng minh phương trình luôn có nghiệm với mọi m. \par
+b) Tìm m để 2 nghiệm $x_1, x_2$ của phương trình thoả mãn : 
+$$\dfrac{4x_1 - 1}{x_2} + \dfrac{4x_2 - 1}{x_1} = -14$
+
+\   
+
+\textbf{Câu 3:(1 điểm)} Một nhân viên kế toán ở một công ty được lĩnh lương khởi điểm là 5 000 000đ/ tháng. Cứ một năm nhân viên ấy được tăng lương thêm 10\%. Hỏi sau 3 năm làm việc, nhân viên đó lĩnh tổng cộng bao nhiêu tiền ? \par
+
+\   
+
+\textbf{Câu 4:(1 điểm)} Người ta pha 200g dung dịch muối thứ nhất vào 300g dung dịch muối thứ hai thu được dung dịch muối có nồng độ 4\%. Hỏi nồng độ muối trong dung dịch muối thứ nhất và thứ hai, biết nồng độ muối trong dung dịch thứ nhất lớn hơn nồng độ muối trong dung dịch thứ hai là 5\%.
+
+\begin{multicols}{2}
+
+\textbf{Câu 5:(1 điểm)} Một thấu kính hội tự có tiêu cự 16cm, vật sáng AB được đặt trên trục chính và vuông góc với trục chính, cách quang tâm O của thấu kính là 20cm. Hãy so sánh chiều cao của vật AB và ảnh A'B' ?
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=7cm]{de13-5.png}
+\end{center}
+
+\end{multicols}
+
+\textbf{Câu 6:(1 điểm)} Năm nay tổng số tuổi của 2 ông cháu là 50. Nếu nhân tuổi của 2 ông cháu lại thì được 225. Hỏi tuổi ông và cháu năm nay là bao nhiêu ?
+
+\begin{multicols}{2}
+
+\textbf{Câu 7:(1 điểm)} Bốn nửa đường tròn bằng nhau có bán kính 2cm, tiếp xúc với nhau từng đôi một, được đặt trong hình (xem hình vẽ). Tìm diện tích hình vuông.
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=3cm]{de13-7.png}
+\end{center}
+
+\end{multicols}
+
+\textbf{Câu 8:(2,5 điểm)} Cho điểm S ngoài đường tròn (O) với SO = 2R, vẽ 2 tiếp tuyến SA và SB đến đường tròn (A, B là tiếp điểm). Gọi I là giao điểm của AB với SO. \par
+a) Chứng minh SO \pot AB tại I và tứ giác SAOB nội tiếp. \par
+b) Trên tia đối của tia BA lấy điểm C, từ S vẽ đường thẳng vuông góc với OC tại K cắt (O) tại H. Chứng minh CH là tiếp tuyến của (O). \par
+c) Tính diện tích hình phẳng theo R giới hạn bởi SA, SB và cung AB nhỏ.
+
+\break
+
+\subsection{Đề 14}
+
+\textbf{Câu 1:} Trong mặt phẳng toạ độ Oxy cho hàm số $y = \dfrac{-1}{4}x^2$ có đồ thị  (P) và đường thẳng (D) : $y = -x$ \par
+a) Vẽ  (P) và (D). \par
+b) Viết phương trình đường thẳng $(D_1)$ song song với (D) và cắt(P) tại điểm có hoành độ là -2. \par
+
+\ 
+
+\textbf{Câu 2:} Cho phương trình : $x^2 - (2m + 1)x + m^2 +2 = 0.$ (1) \par
+a) Tìm m để phương trình (1) có nghiệm $x_1, x_2$ \par
+b) Tìm m để 2 nghiệm $x_1, x_2$ thoả mãn hệ thức : $3x_1x_2  - 5(x_1 + x_2) + 7 = 0$ \par
+
+\   
+
+\textbf{Câu 3:} một người đi xe máy lên dốc có độ nghiệm $4^o$ so với phương ngang với vận tốc trung bình lên dốc là 9km/h. Hỏi người đó mất bao lâu để lên tới đỉnh dốc. Biết đỉnh dốc cao khoảng 15m. \par
+
+\    
+
+\textbf{Câu 4:} Cho rằng diện tích rừng nhiệt đới trên Trái Đất được xác định bởi hàm số $S = 718,3 - 4,6t$ trong đó S tính bằng héc-ta, t tính bằng số năm kể từ năm 1990. Hãy tính diện tích rừng nhiệt đới vào các năm 1990 và 2018. \par
+
+\    
+
+\textbf{Câu 5:} Một vé xem phim có giá 60.000 đồng. Khi có đợt giảm giá, mỗi ngày số lượng người xem tăng lên 50\%, do đó doanh thu cũng tăng 25\%. Hỏi giá vé khi được giảm là bao nhiêu ? \par
+
+\    
+
+\textbf{Câu 6:} Bạn An dùng kính lão của ông nội (một loại thấu kính hội tụ) để làm thí nghiệm tạo ảnh một cây đèn cầy trên tấm màn. Cho rằng vật sáng có hình đoạn thẳng AB đặt vuông góc với trục chính của một thấy kính hội tụ, cách thấy kính một đoạn OA = 16cm. Thấu kính có quang tâm O và tiêu cự F, có tiêu cự = 12cm. Vặt AB cho ảnh thật A'B' (có đường đi của tia sáng được mô tả như hình vẽ). Tính xem ảnh cao gấp bao nhiêu lần vật. 
+
+\begin{center}
+    \includegraphics[width=10cm]{de13-5.png}
+\end{center} 
+
+\textbf{Câu 7:} Nhận dịp lễ Quốc tế phụ nữ 8/3, bạn Hoa định đi siêu thị mua quà tặng mẹ một cái máy sấy tóc và một cái bàn ủi với tổng số tiền là 700 000 đồng. Vì lễ nên siêu thị giảm giá, mỗi máy sấy tóc giảm 10\%, mỗi bài ủi giảm 20\% nên Hoa chỉ trả là 585 000 đồng. Hỏi giá tiền ban đầu (khi chưa giảm giá) của mỗi cái máy sấy tóc, bàn ủi là bao nhiêu ?
+
+\   
+
+\textbf{Câu 8:} Cho tam giác ABC (AB < AC) nội tiếp đường tròn (O) có đường cao AD. Vẽ $DE \bot AC$ tại E và $DF \bot AB$ tại F. \par
+a) Chứng minh $\widehat{AFE} = \widehat{ADE}$ và tứ giác ABEF nội tiếp. \par
+b) Tia È cắt tia CB tại M, đoạn thẳng AM cắt đương tròn (O) tại N (khác A). Chứng minh MN .MA = MF.ME \par
+c) Tia ND cắt đường tròn (O) tại I. Chứng minh OI \bot EF. \par
+
+\break
+
+\subsection{Đề 15}
+
+\textbf{'''''Câu 1: (1 điểm)} Cho hàm số $y = x^2$ có đồ thị (P) và hàm số (d): $y = \dfrac{-3}{2}x + \dfrac{9}{2}$ \par
+a) Vẽ đồ thị (P) và (d) trên cùng một hệ trục toạ độ. \par
+b) Cho đường thẳng $(d_1) : y = x - m^2$. Tìm m để $(d_1)$ cắt (P) tại hai điểm phân biệt.
+
+\   
+
+\textbf{Câu 2: (1 điểm)} Cho phương trình $4x^2 - 12x + 5 = 0$. Không giải phương trình. Tính giá trị biểu thức $M = x_1(x_1^2 - x_2) + x_2(x_2^2 - x_1)$ \par
+
+\    
+
+\textbf{Câu 3:(1 điểm)} Để đảm bảo lượng dinh dưỡng cho cơ thể thì mỗi gia đình cần 900 đơn vị protein và 500 đơn vị lipit cho mỗi bữa ăn hàng ngày. Mỗi kg thịt bò chứa 800 đơn vị protein và 200 đơn vị lipit. Mỗi kg thịt heo chưa 600 đơn vị protein và 400 đơn vị lipit. Hỏi mẹ bạn cần bao nhiêu tiền để mua lượng thịt đảm bảo dinh dưỡng trên ? Biết rằng 1 kg thịt bò giá 100 000 đồng , 1 kg thịt heo giá 70 000 đồng. \par
+
+\   
+
+\textbf{Câu 4:(1 điểm)} Tỉ lệ nước trong hạt cà phê tươi là 22\%, người ta lấy một tấn cà phê tươi đem phơi khô. Hỏi lượng nước cần bay hơi đi là bao nhiêu để lượng cà phê khô thu đuowjc chỉ có tỉ lệ nước là 4\%. \par
+
+\   
+
+\begin{multicols}{2}
+
+\textbf{Câu 5:(1 điểm)} Một vật sáng AB cao 2cm đặt trước một thấu kính hội tự và cách quang tâm O của thấu kính 15cm. Sau thấu kính thu được một ảnh A'B' rõ nét trên màn và khoảng cách từ màn đến quang tâm O là 45 cm. Tính chiều cao của A'B'. \par
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=8cm]{de13-5.png}
+\end{center}
+
+\end{multicols}
+
+\textbf{Câu 6:(1 điểm)} Mỗi ngày bạn An đi bộ tập thể dục vào mỗi buổi sáng. Trong 1 phút bạn bước được 80 nước chân và trong 15 phút bạn đi được 360m. \par
+a) Hãy tính khoảng cách giữa 2 bước chân. \par
+b) Hỏi bạn đi bộ về nhà hết mấy bước chân? Biết từ chỗ tập thể dục về nhà khoảng 480m.\par
+
+\begin{multicols}{2}
+
+\textbf{Câu 7:(1 điểm)} Một vệ tính nhân tạo địa tĩnh chuyển động theo suỹ đạo tròn cách bề mặt trái đất một khoàng 36000 km, tâm quỹ đạo của vệ tính trùng với tâm trái đất. vệ tinh phát tín hiệu vô tuyến theo một đường thẳng đến một vị trí trên trái đất. Hỏi vị trí xa nhất trên trái đất có thể nhận được tín hiệu từ vệ tinh này một khoảng bao nhiêu? Biết rằng trái đất được xem như một hình cầu có bán kính khoảng 6400km. 
+
+\columnbreak
+
+\   
+
+\begin{center}
+    \includegraphics[width=7cm]{de6-7.png}
+\end{center}
+
+\end{multicols}
+
+\textbf{Câu 8:(2,5 điểm)} Từ một điểm A nằm ngoài đường tròn (O) sao cho $AO \ne 2R$, kẻ 2 tiếp tuyến AB, AC với (O) (B và C là 2 tiếp điểm). \par
+a) Chứng minh tứ giác ABOC nội tiếp và $AO \bot BC$. \par
+b) Gọi I là trung điểm của AC; BI cắt (O) tại E $(E\ne B)$. Chứng minh A, E, D thẳng hàng.
+
+\break
+
+\subsection{Đề 16}
+
+\textbf{Câu 1:(1,5 điểm} Cho (P) : $y = \dfrac{1}{4}x^2$ và (D) : $y = -x + 3$ \par
+a) Vẽ (P) và (D) trên cùng một hệ trục toạ độ. \par
+b) Tìm m để đường thẳng ($d_1$) : $y = \dfrac{1}{2}x - m$ cắt (P) tại hai điểm phân biệt. \par
+
+\    
+
+\textbf{Câu 2:(1 điểm)} Cho phương trình $3x^2 + 5x - 6 = 0$. Không giải phương trình. Hãy tìm giá trị biểu thức sau : $A = (3x_1 - 2x_2)(3x_2 - 2x_1$ \par
+
+\    
+
+\textbf{Câu 3:(1 điểm)} Giải bóng đá "Chào mừng ngày nhà giáo Việt Nam 20/11" của trường THCS Nguyễn Trãi có 10 đội tham dự, thi đấu vòng tròn một lượt. Sau mỗi trận đấu, đội thắng được 3 điểm, đội thua 0 điểm; nếu hai đội hoà nhau thì mỗi đội được 1 điểm. Kết thúc giải, tổng số điểm của các đội là 126 điểm. Hỏi tổng số trận đấu của toàn giải? Có bao nhiêu trận thắng - thua? \par
+
+\    
+
+\textbf{Câu 4:(1 điểm)} Có hai lọ dung dich muối với nồng độ lần lượt 5\% và 20\%. Người ta trộn hai dung dịch trên để có 1kg dung dịch mới có nồng độ 14\%. Hỏi phải dùng bao nhiêu kg mỗi loại dung dịch?
+
+\begin{multicols}{2}
+
+\textbf{Câu 5:(1 điểm)} Một vật sáng AB được đặt vuông góc với trục chính của một thấu kính hội tụ có tiêu cự là 18cm. Biết vật cách quang tâm O của thấu kính là 20cm (Xem hình vẽ). Hãy so sánh độ lớn của vật AB với ảnh A'B'.
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=8cm]{de13-5.png}
+\end{center}
+
+\end{multicols}
+
+\textbf{Câu 6:(1 điểm)} Quãng đường AB gồm một đoan lên dốc dài 4km và mọt đoạn xuống dốc dài 5km. Một người đi xe đạp từ A đến B hết 40 phút và đi từ B về A hết 41 phút (Vận tốc lên dốc, xuống dốc lúc đi và lúc về như nhau). Tìm vận tốc lúc lên dốc và lúc xuống dốc. 
+
+\begin{multicols}{2}   
+
+\textbf{Câu 7:(1 điểm)} Để giúp xe lửa chuyển từ một đường ray này sang một đường ray theo hướng khác, người ta làm xen giữa một đoạn đường ray hình vòng cung. Biết chiều rộng của đường ray là BA = 1,1m và BC = 28,4cm. Hãy tính bán kính OA = R của đoạn đường ray hình vòng cung. \par
+
+\columnbreak
+
+\begin{center}
+    \includegraphics[width=8cm]{de16-7a.png}
+\end{center}
+
+\end{multicols}
+
+\textbf{Câu 8:(2,5 điểm)} Từ điểm M nằm ngoài đường tròn (O; R) sao cho $OM > 2R$; vẽ hai tiếp tuyến MA, MB (A, B là hai tiếp điểm). Gọi I là trung điểm của AM; BI cắt (O) tại C, tia MC cắt (O) tại D. \par
+a) Chứng minh: $OM \bot AB$ tại H và $IA^2 = IB.IC$. \par
+b) Chứng minh: BD // AM. \par
+c) Chưng minh: Tứ giác AHCI nội tiếp và tia CA là tia phân giác của góc ICD. \par
+
+\break
+
+\subsection{Đề 17}
+
+\textbf{Câu 1:} Cho hàm số : $y = \dfrac{x^2}{4}$ (đồ thị P) và hàm số: $y = x - 1$ (đồ thị D) \par
+a) Vẽ đồ thị hàm số trên cùng mặt pẳhng toạ độ Oxy. \par
+b) Tìm giao điểm của  (D) và (P) bằng phép toán. |par
+
+\    
+
+\textbf{Câu 2:} Cho phương trình : $4x^2 - 4mx - 2m + 3 = 0$ với x là ẩn. Tìm m để phương trình có nghiệp kép. \par
+
+\   
+
+\textbf{Câu 3:} Một nhà máy xí nghiệp sản xuất hàng năm được xác định theo hàm số: $T = 32,5m + 360$. Với T là sản lượng (đơn vị tấn) và m là số năm tính từ năm 2010. Hãy tính sản lượng xi măng của nhà máy đó tại các năm 2010 và năm 2017. \par
+
+\   
+
+\textbf{Câu 4:} Một hồ bơi hình chữ nhật có chiều dài hơn chiều rộng 7m. Nếu tăng chiều dài thêm 3m và giảm chiều rộng 11m, thi diện tích giảm đi 1/2. Tính chu vi lúc ban đầu của hồ bơi.\par
+
+\   
+
+\textbf{Câu 5:} Bạn An muốn pha 3kg nước nóng ở nhiệt độ $100^oC$ với một số nước đá ở nhiệt độ $-10^oC$ để có một thau nước ở nhiệt độ $60^oC$, vậy bạn ấy cần một khối lượng nước đá là bao nhiêu ? (trường hợp chỉ có nước truyền nhiệt với nhau , làm tròn đến 1 chữ số thập phân) \par
+
+\    
+
+\textbf{Câu 6:} Bạn Xuân muốn cắt một tấm bìa hình chữ nhật dài 7cm và có đường chéo hơn chiều rộng 4cm. Em hãy giúp Xuân tính chu vi của tấm bìa đó (Làm tròn kết quả đến mm) \par
+
+\   
+
+\textbf{Câu 7:} Hai ô tô khởi hành cùng một lức trên quãng đường từ Sài Gòn đến Phan Thiết dài 240km. Mỗi giờ ô tô thứ nhất chạy nhanh hơn ô tô thứ hai là 10km nên đến Phan Thiết trước ô tô thứ hai là 48 phút. Tính vận tốc của mỗi ô tô. \par
+
+\    
+
+\textbf{Câu 8:} Cho tam giác ABC vuông tại A; M là một điểm thuộc cạnh AC(M khác A và C). Đường tròn đường kính MC cắt BC tại N và cắt tia BM tại I. Chứng minh rằng : \par
+a) ABNM và ABCI là tứ giác nọi tiếp được đường tròn. \par
+b) NM là tia phân giác của góc ANI. \par
+c) $BM.BI + CM.CA = AB^2 + AC^2$
+
+\break
+
+\subsection{Đề 18}
+
+\textbf{Câu 1:(1 điểm)} Cho hàm số : $y = \dfrac{-x^2}{2}$ có đồ thị là (P). \par
+a) Vẽ (P) mặt phẳng toạ độ. \par
+b) Trên đồ thị (P) lấy hai điểm A và B cốhafnh độ lần lượt là -1 và 2. Hãy viết phương trình đường thẳng AB. \par
+
+\   
+
+\textbf{Câu 2:(1 điểm)} Cho phương trình: $x^2 - 2(m + 1)x + m^2 - 3 = 0$ (x là ẩn) \par
+a) Tìm m đểp phương trình có nghiệm kép. Tính nghiệm kép đó.
+b) Goi $x_1, x_2$ là 2 nghiệp của phương trình trên khi m = 2. \par
+Hãy tính giá trị biểu thức sau : $A = \dfrac{x_2^2-6x_2}{x_1} + \dfrac{x_1^2-6x_1}{x_2} + 2(\dfrac{1}{x_1} + \dfrac{1}{x_2})$ \par
+
+\textbf{Câu 3:(1 điểm)} Cho (O; R) có đường kính AB. Vẽ dây CD vuông góc với AB tại M. Giả sử AM = 1cm; CD = 2\sqrt{3}cm. Hãy tính: \par
+a) Độ dài của đường tròn (O). \par
+b) Độ dài cung CAD. \par
+
+\   
+
+\textbf{Câu 4:(1 điểm)} Một tổ mua nguyên vật liệu để tổ chức thuyết trình tại lớp hết 72 000 đồng, chi phí được chia đều cho các thành viên của tổ. Nếu tổ giảm đi 2 thành viên thì mỗi bạn phải đóng thêm 3 000 đồng. Hỏi tổ có bao nhiêu bạn ? \par
+
+\   
+
+\textbf{Câu 5:(1 điểm)} Anh Chí vay 50 000 000 đồng của một ngân hàng trong thời hạn một năm để mua tôm giống. Lẽ ra khi hết một năm, anh Chí phải trả cả vốn lẫn lãi, nhưng vì thiên tại gây thiệt hại nặng nề cho việc nuôi tôm, anh Chí phải trả cả vốn lẫn lãi, nhưng vì thiên tai gây thiệt hại nặng nề cho việc nuôi tôm, anh được ngân hàng đồng ý kéo dài thời gian trả nợ thêm một năm nữa, số lãi của năm đầu được gộp vào vốn để tính lãi năm sau, lãi suất không đổi. Sau hai năm, anh phải trả cả vốn lẫn lãi là 58 320 000 đồng. Hỏi lãi suất cho vay của ngân hàng là bao nhiêu phần trăm/ năm ?
+
+\   
+
+\textbf{Câu 6:(} Theo quy định của bộ công thương, giá bán lẻ điện sinh hoạt từ -1/12/2017 dao động trong khoảng từ 1549 đồng tới 2701 đồng mỗi kwh tuỳ bậc thang. 
+Trong tháng 1 năm 2018 gia đình ông Tâm đã sử dụng hết 325kwh điện. Hỏi gia đình ông Tâm phải trả cho công ty điện lực bao nhiêu tiền ? Biết rằng tiền thuế giá trị gia tăng là 10\% (Làm tròn đến hàng nghìn) \par
+
+\   
+
+\textbf{Câu 7:(1 điểm)} Một hồ bơi có dạng là một lăng trụ đứng tứ giác với đấy là hình thang vuông (mặt bên (1) của hồ bơi là 1 đáy lăng trụ) và các kích thước như đã cho (xem hình vẽ). Biết rằng người ta dùng một máy bơm với lưu lượng là 42 $m^3$/phút và sẽ bơm đầy hồ mất 25 phút. Tính chiều dài của hồ. \par
+
+\   
+
+\textbf{Câu 8:(3 điểm)} Cho tam giác ABC nhọn (AB > AC). Vẽ đường tròn tam O đường kính  AB cắt các cạnh BC, AC lần lượt tại D, E. Gọi H là giao điểm của AD và BE. \par
+
+a) Chứng minh : Tứ giác CEHD nội tiếp. \par
+b) Từ C vẽ đường thẳng song song với AD cắt đường thẳng BE tại M, từ C vẽ tiếp đường thẳng song song với BE cắt đường thẳng AD tại N. Chứng minh: $\Delta HNC \backsim \Delta BAC$ và $OC \bot MN$. \par
+c) Đường thẳng CH cắt AB tại F. Tính diện tích $\Delta ABC$ khi FA = 15cm, HF = 5cm. \par
+
+
+\break
+
+\subsection{Đề 19}
+
+\textbf{'''''Câu 1:} a) Vẽ đồ thị (P) của hàm số $y = \dfrac{-x^2}{4}$ và đường thẳng (D) của hàm số $y = \dfrac{x}{4} - 3$ trên cùng một hộ trực toạ độ.\par
+b) Tìm toạ độ giao điểm của (P) và (D) ở câu trên bằng phép tính.
+
+\   
+
+\textbf{Câu 2:} Cho phương trình: $x^2 - 2(m - 5)x - 4m + 1 = 0$ (x là ẩn số) \par
+a) Chứng tỏ phương trình đã cho luôn có 2 nghiệm phân biệt $x_1, x_2$ với mọi x. \par
+b) Tìm m để hai nghiệm $x_1, x_2$ của phương trình đã cho thoả : $$2x_1^2 + x_1^2.x_2 + x_1.x_2^2 + 2x_2^2 + 2x_2^2 = 6$ \par
+
+\textbf{Câu 3:} Một ô tô và xe máy xuất phát cùng một lúc, đi từ điểm A đến điểm B cách nhau 180km. Vận tốc ô tố lớn hơn vận tốc xe máy là 10km/h, nên ô tô đã đến B trước xe máy 36 phút. Tính vận tốc mỗi xe. \par
+
+\    
+
+\textbf{Câu 4:} Có 2 lọ dung dịch muối ở mồng độ lần lượt là 10\% và 40\%. Người ta pha trộn hai dung dịch trên để có 1kg dung dịch mới có nồng độ 28\%. Hỏi khối lượng mỗi loại dung dịch đã dùng là bao nhiêu ? \par
+
+\   
+
+\textbf{Câu 5:} Có 2 dây chuyền may áo sơ mi. Ngày thứ nhất cả hai dây chuyển may được 930 áo. Ngày thứ hai dây chuyền thứ nhất tăng lãi suất lên 18\% và dây chuyền thứ hai tăng năng suất lên 15\% thì số áo cả hai dây chuyền may được 1083 áo. Hỏi trong ngày thứ nhất mỗi dây chuyền may được bao nhiêu áo ?
+
+\   
+
+\textbf{Câu 6:} Một người cầm Eke để đo chiều cao của cây theo hình vẽ và cac số liệu đi kèm. Biết khoảng cách từ chân người đứng đến gốc cây là 12m và chiều cao từ mắt người đó đến mặt đất là 1,5m. Tính chiều cao của cây (đơn vị m và làm tròn đến chữ số thập phân thứ nhất) (xem hình 2) \par
+
+\   
+
+\textbf{Câu 7:} Trên một khu đất hình vuông cạnh 12m. Người ta làm một nền nhà hình vuông có chu vi 24m và xây một bồn hoa hình tròn có bán kính 2m, xung quanh bồn hoa người ta xây một lối đi chiếm hết diện tích 15,7m. Tính diện tích phần đất còn lại ? \par
+
+\   
+
+\textbf{Câu 8:} Từ một điểm M ở ngòai đường tròn (O,R) với OM > 2R vẽ hai tiếp tuyến MA, MB với  (O) gọi I là trung điểm AM, BI cắt (O) tại C. Tia MC cắt (O) tại D. Gọi H là giao điểm OM và AB. \par
+a) Chứng minh : $OM \bot AB$ tại H và $AI^2 = IB.IC$ \par
+b) Chứng minh : $\widehat{BDC} = \widehat{DMA}$. Suy ra AM//BD. \par
+c) Chứng minh :  Tứ giác AHCI nội tiếp và CA là tia phân giác \widehat{ICD}
+
+\break
+
+\subsection{Đề 20}
+
+\textbf{Câu 1:} Cho parabol (P): $y = \dfrac{1}{2}x^2$ và đường thẳng (D): $y = -\dfrac{3}{2}x + 2$ \par
+a) Vẽ (P) và (P) trên cùng hệ trục toạ độ \par
+b) Tìm phương trình đường thẳng (D'), biết (D') song song với (D) và (D') cắt (P) tại điểm A có hoành độ bằng 2 \par
+
+\   
+
+\textbf{Câu 2:} Cho phương trình : $x^2 - (2m + 1)x - m^2 + m - 3 = 0$ (1) (x là ẩn) \par
+a) Chứng minh phương trình luôn có 2 nghiệm phân biệt với mọi m. \par
+b)Định m để : $x_1(x_1-3) + x_2(x_2 - 3) + 2x_1x_2 = 2x_1^2x_2 + 2x_1x_2^2$ \par
+
+\   
+
+\textbf{Câu 3:} Năm ngoái tổng số dân của 2 tỉnh A và B là 4 triệu người. Dân số tỉnh A năm nay tăng 1,2\% còn tỉnh B tăng 1,1\%. Tổng số dân của cả hai tỉnh năm nay là 4045000 người. Tính số dân của mỗi tỉnh năm ngoái và năm nay ? \par
+
+\   
+
+\textbf{Câu 4:} Tính chiều cao của một ngọn núi, cho biết tại hai điểm cách nhau 500m, người ta nhìn thấy đỉnh núi với góc nâng lần lượt là $34^o$ và $38^o$. (làm tròn 2 chữ số thập phân). \par
+
+\begin{center}
+    \includegraphics[width=8cm]{de20-4.png}
+\end{center}
+
+\textbf{Câu 5:} Một căn phòng hình hộp chữ nhật gồm một cửa ra vào và 2 cửa sổ. Biết căn phòng có chiều rộng là 4m, chiều dài là 8m và chiều cao là 3,6m, cửa ra vào có kích thước là 1,2mx2m và mỗi cửa sổ có kích thước 1,2mx1,5m. Chủ nhà sơn nước các tường(bên trong) và trần nhà. Tính diện tích được sơn. \par
+
+\   
+
+\textbf{Câu 6:} Một sửa hàng khuyến mãi một số sản phẩm bánh kem mua 4 tặng 1. Giá bán 1 bánh là 6000 đồng. Nam mua 11 bánh, Lan mua 14 bánh. Nam nói với Lan mua chung sẽ ít tốn kém hơn từng người mua riêng. Lan hỏi Nam mua chung sẽ đỡ tốn hơn bao nhiêu tiền và mỗi người phải trả bao nhiêu ? (biết tỉ lệ số tiền mỗi người trả tỉ lệ với số bánh mỗi người mua, kết quả làm tròn dến đơn vị ngàn). \par
+
+\   
+
+\textbf{Câu 7:} Lớp 9T có 30 bạn, mỗi bạn dự định đóng góp mỗi tháng 70000 đồng và sau 3 tháng sẽ đủ tiền mua tặng cho mỗi em ở mái ấm tình thương X ba món quà (giá tiền các món quà có giá tiền như nhau). Khi các bạn đóng đủ số tiền như dự định thì mái ấm lại nhận thêm 9 em nhỏ nữa, và số tiền mua mỗi phần quà tăng thêm 5\%, nên số quà mua được cho mỗi em chỉ còn lại 2 món. Hỏi lúc đầu có bao nhiêu em ở mái ấm tình thương X ? \par
+
+\  
+
+\textbf{Câu 8:} Cho điểm A nằm ngoài đường tròn (O;R). Vẽ các tiếp tuyến AB, AC với đường tròn (O) tại B và C. \par
+a) Chứng minh : Tứ giác ABOC nội tiếp được đường tròn .\par
+b) Vẽ cát tuyến ADE với đường tròn (O) (cát tuyến ADE không qua tâm O; D nằm giữa A và E). Chứng minh : $AB^2 = AD.AE = OA^2 - R^2$ \par
+c) Gọi H là giao điểm của BC và OA. Chứng minh tứ giác HDEO nội tiếp.
+
+\break
+
+\subsection{Đề 21 - Tuyển sinh lớp 10 TP.HCM năm 2018 - 120 phút}
+
+Câu 1:(1,5 điểm) Cho (P): $y = x^2$ và đường thẳng (d): $y = 3x - 2$
+
+\newline a) Vẽ (P) và (d) trên cùng một hệ trục toạ độ.
+
+\newline b) Tìm toạ độ giao điểm của  (P) và (d) bằng phép tính.
+
+\
+
+\newline Câu 2: (1 điểm) Cho phương trình: $3x^2 - x - 1 = 0$ có 2 nghiệm là $x_1, x_2$. Không giải phương trình hãy tính giá trị biểu thức $A = {x_1}^2 + {x_2}^2$
+
+\
+
+\newline Câu 3: (0.75 điểm)
+\newline Mối quan hệ giữa thang nhiệt độ F(Fahrenheit) và thang nhiệt độ C (Celsius) được cho bởi công thức $T_F = 1,8.T_c + 32$, trong đó $T_c$ là nhiệt độ tính theo C và $T_F$ là nhiệt độ tính theo độ F. Ví dụ $T_c = O^oC$ tương ứng với $T_F = 32^oF$.
+\newline a)  Hỏi $25^oC$ tương ứng với bao nhiêu độ F?
+\newline b) Các nhà khoa học đã tìm ra liên hệ giữa A là số tiếng kêu của một con dế trong một phút và $T_F$ là nhiệt độ cơ thể của nó bởi công thức: $A = 5,6.T_F - 275$, trong đó nhiệt độ $T_F$ tính theo độ F. Hỏi nếu con dế kêu 106 tiếng trong một phút thì nhiệt độ của nó khoảng bao nhiêu độ C? (làm tròn đến hàng đơn vị)
+
+\begin{multicols}{2}
+\begin{center}
+	\includegraphics[width=5cm]{con-de.png}
+\end{center} 
+\columnbreak
+\begin{center}
+	\includegraphics[width=8cm]{nhiet-ke.png}
+\end{center} 
+\end{multicols}
+
+\newline Câu 4: (0,75 điểm) Kim tự tháp Kheops - Ai Cập có dạng hình chóp đều, đáy là hình vuông, các mặt bên là các tam giác cân chung đỉnh (hình vẽ). Mỗi cạnh bên của kim tự tháp dài 214m, cạnh đáy của nó dài 230m.
+
+\newline a) Tính theo chiều cao h của kim tự tháp (làm tròn đến chữ số thập phân thứ nhất).
+
+\newline b) Cho biết thể tích của hình chóp được tính theo công thức $V = \dfrac{1}{3}S.h$, trong đó S là diện tích mặt đáy, h là chiều cao của hình chóp. Tính theo $m^3$ thể tích của kim tự tháp này (làm tròn đến hàng nghìn).
+
+\begin{multicols}{2}
+\begin{center}
+	\includegraphics[width=7cm]{kimtuthap.jpg}
+\end{center} 
+\columnbreak
+\begin{center}
+	\includegraphics[width=8cm]{hinh-kim-tu-thap.png}
+\end{center} 
+\end{multicols}
+
+\newline Câu 5: (1điểm) Siêu thị A thực hiện chương trình giảm giá cho khách hàng mua loại túi bột giặt 4kg như sau: Nếu mua 1 túi thì được giảm 10.000 đồng so với giá niêm yết. Nếu mua 2 túi thì túi thứ nhất được giảm 10.000 đồng và túi thứ 2 được giảm 20.000 đồng so với giá niêm yết. Nếu mua từ 3 túi trở lên thì ngoài 2 túi đầu được hưởng chương trình giảm giá như trên, từ túi thứ 3 trở đi mỗi túi sẽ được giảm 20\% so với giá niêm yết.
+\newline a) Bà Tư mua 5 túi bột giặt loại 4kg ở siêu thị A thì phải trả số tiền là bao nhiêu, biết rằng loại túi bột giặt bà Tư mua có giá niêm yết là 150.000đ/túi.
+\newline b) Siêu thị B lại có hình thức giảm giá khác cho loại túi giặt nêu trên là: nếu mua từ 3 túi trở lên thì sẽ giảm giá 15\% cho mỗi túi. Nếu bà Tư mua 5 túi bột giặt thì bà bà Tư nên mua ở siêu thị nào để số tiền phải trả là ít hơn? Biết rằng giá niêm yết của 2 siêu thị là như nhau.
+
+\
+
+\newline Câu 6: (1 điểm) Nhiệt độ sôi của nước không phải lúc nào cũng là $100^oC$ mà phụ thuộc vào độ cao của nơi đó so với mực nước biển. Chẳng hạn Tp. Hồ Chí Minh có độ cao xem như ngang mực nước biển (x = 0m) thì nước có nhiệt độ sôi là $y = 100^oC$ nhưng ở thủ đô La Paz của Bolivia, Nam Mỹ có độ cao x = 3.600m so với mực nước biển thì nhiệt độ sôi của nước là $y = 87^oC$. Ở độ cao trong khoảng vài km, người ta thấy mối liên hệ giữa hai đại lượng này là một hàm số bậc nhất y = ax + b có đồ thị như sau:
+\newline a) Xác định các hệ số a và b.
+\newline b) Thành phố Đà Lạt có độ cao 1500m so với mực nước biển. Hỏi nhiệt độ sôi của nước ở thành phố này là bao nhiêu ?
+
+\begin{center}
+	\includegraphics[width=14cm]{de21-cau6.png}
+\end{center}
+
+\
+
+\newline Câu 7: (1 điểm) Năm học 2017-2018, trường THCS Tiến Thành có 3 lớp 9 gồm 9A, 9B, 9C trong đó lớp 9A có 35 học sinh và lớp 9B có 40 học sinh. Tổng kết cuối năm học, lớp 9A có 15 học sinh giỏi, 9B là 12 học sinh giỏi, 9C có 20\% học sinh đạt danh hiệu học sinh giỏi và toàn khối 9 có 30\% học sinh đạt danh hiệu học sinh giỏi. Hỏi lớp 9C có bao nhiêu học sinh giỏi ?
+
+\
+
+\newline Câu 8: (3 điểm) Cho tam giác nhọn ABC có BC=8cm. Đường tròn tâm O đường kính BC cắt AB, AC lần lượt tại E và D. Hai đường thẳng BD và CE cắt nhau tại H.
+\newline a) Chứng minh: AH vuông góc với BC
+\newline b) Gọi K là trung điểm của AH. Chứng minh tứ giác OEKD nội tiếp.
+\newline c) Cho $\widehat{BAC} = 60^o$. Tính độ dài đoạn DE và tỉ số diện tích của 2 tam giác AED và ABC.
+
+\break
+
+\section{Phần đáp án}
+
+\subsection{Đáp án đề 1}
+
+\textbf{Câu 1:}
+
+a) $x^4 - 3x^2 + 2 = 0$ \par
+Đặt $X = x^2 \geq 0$ \par
+Ta có : $X^2 - 3X + 2 = 0$ \par
+Theo công thức nhẩm nghiệm : $a = 1, b = -3, c = 2$ thì $a + b + c = 0$. \par
+Vậy $X_1 = 1 > 0$ (nhận) và $X_2 = 2 > 0$ (nhận) \par
+Với X_1 = 1 \Rightarrow $x_1 = 1$ và $x_2 = -1$ \par
+Với X_2 = 2 \Rightarrow $x_3 = \sqrt{2}$ và $x_4 =- \sqrt{2}$ \par
+Vậy tập nghiệm của phương trình là S = $\left\{-\sqrt{2}; -1; 1; \sqrt{2}\right\}$ \par
+
+\   
+
+b) $x^2 - (\dfrac{x}{x - 1})^2 = 0 $ \par
+Điều kiện xác định : $x - 1 \neq 0$ \Leftrightarrow x  \neq 0 \par
+Ta có : $x^2.(x - 1)^2 - x^2 = 0$ \par
+\Leftrightarrow $ (x - \dfrac{x}{x - 1`)(x + \dfrac{x}{x - 1}) = 0 $ \par
+\Leftrightarrow $ x - \dfrac{x}{x - 1} = 0 \vee x + \dfrac{x}{x - 1} = 0 $ \par
+Với $ x - \dfrac{x}{x - 1} = 0$ \par 
+\Leftrightarrow $ x.(x - 1) - x = 0$ \par
+\Leftrightarrow $ x.(x - 2) = 0 \Leftrightarrow x_1 = 0$ (Nhận) và $x_2 = 2$ (Nhận) \par
+Với $ x + \dfrac{x}{x - 1} = 0$ \par
+\Leftrightarrow $ x.(x - 1) + x = 0$ \par
+\Leftrightarrow $ x^2 = 0 \Leftrightarrow x_3 = 0$ (Nhận)  \par
+Vậy tập nghiệm của phương trình là : S = $\left\{0; 2\right\}$ \par
+
+\   
+
+c) \begin{cases}
+        \dfrac{-3}{x-y}+\dfrac{2}{2x+y}=-2 \\
+        \dfrac{4}{x-y}-\dfrac{10}{2x+y}=2 \\
+    \end{cases}
+Đặt ẩn phụ : $u = \dfrac{1}{x - y}$ và $v = \dfrac{1}{2x + y}$ \par
+
+Ta có :
+\begin{cases}
+    -3u + 2v = -2 \\
+    4u - 10v = 2 \\
+\end{cases} \Leftrightarrow 
+\begin{cases}
+    -15u + 10v = -10 \\
+    4u - 10v = 2 \\
+\end{cases} \Leftrightarrow 
+\begin{cases}
+    v = \dfrac{3u - 2}{2} \\
+    -11u = -8 \\
+\end{cases} \par
+\Leftrightarrow
+\begin{cases}
+    u = \dfrac{8}{11} \\
+    v = \dfrac{1}{11} \\
+\end{cases} \par
+Vậy : \begin{cases}
+    x - y = \dfrac{11}{8} \\
+    2x + y = 11 \\
+\end{cases} \Leftrightarrow 
+\begin{cases}
+    x = y + \dfrac{11}{8} \\
+    3x = \dfrac{99}{8} \\
+\end{cases} \Leftrightarrow 
+\begin{cases}
+    y = \dfrac{11}{2} \\
+    x = \dfrac{33}{8} \\
+\end{cases}
+
+\textbf{Câu 2:} \par
+a) $y = \dfrac{1}{2}x^2 (P)$, $y = 2x - 2 (d_1)$ \par
+(P) tiếp xúc với $(d_1)$ vậy phương trình hoành độ giao điểm có một nghiệm duy nhất : \par
+$\dfrac{1}{2}x^2 = 2x - 2$ \par
+$\Leftrightarrow \dfrac{1}{2}x^2 - 2x + 2 = 0$ \par
+$\Leftrightarrow x^2 - 4x + 4 = 0$ \Leftrightarrow $(x - 2)^2 = 0$ \Leftrightarrow $ x = 2$ \par
+Thay $x = 2$ và phương trình $y = 2x - 2 (d_1)$, ta có : \par
+$y = 2.2 - 2 = 2$. Vậy toạ độ điểm tiếp xúc của giữa 2 đồ thị là (2; 2) \par
+
+b) $y = 3mx - 1 (d_2)$ \par
+$(d_1)$ cắt (P) tại 2 điểm phân biệt khi phương trình hoành độ giao điểm có 2 nghiệp phân biệt : \par
+$3mx - 1 = \dfrac{1}{2}x^2$
+\Leftrightarrow $ x^2 - 6mx + 2 = 0$ \par
+$ \Delta = (3m)^2 - 2 = 9m^2 - 2 \ge 0$ \Leftrightarrow $ (3m - \sqrt{2})(3m + \sqrt{2}) > 0$ (Một tích lớn hơn 0 khi 2 thừa số cùng dấu) \par
++ Trường hợp 1: 
+\begin{cases}
+    3m - \sqrt{2} > 0 \\
+    3m + \sqrt{2} > 0 \\
+\end{cases} \Leftrightarrow 
+\begin{cases}
+    m > \dfrac{\sqrt{2}}{3} \\
+    m > -\dfrac{\sqrt{2}}{3} \\
+\end{cases} \Leftrightarrow $ m > \dfrac{\sqrt{2}}{3}$ \par
++ Trường hợp 2: 
+\begin{cases}
+    3m - \sqrt{2} < 0 \\
+    3m + \sqrt{2} < 0 \\
+\end{cases} \Leftrightarrow 
+\begin{cases}
+    m < \dfrac{\sqrt{2}}{3} \\
+    m < -\dfrac{\sqrt{2}}{3} \\
+\end{cases} \Leftrightarrow $ m < -\dfrac{\sqrt{2}}{3}$ \par
+
+Vậy với $ m < -\dfrac{\sqrt{2}}{3}$ hoặc $ m \dfrac{\sqrt{2}}{3}$ thì phương trình hoành độ giao điểm có 2 nghiệm phân biệt, hay (P) cắt $(d_2)$ tại 2 điểm.  \par
+
+\textbf{Câu 3:} \par
+a) Phương trình : $3x^2 + mx + 2 = 0$
+Để phương trình có 2 nghiệm phân biệt khi :\par
+$\Delta = m^2 - 4.3.2 > 0 \Leftrightarrow (m - \sqrt{24})(m + \sqrt{24}) > 0$ \par
++ Trường hợp 1: 
+\begin{cases}
+    m - \sqrt{24} > 0 \\
+    m + \sqrt{24} > 0 \\
+\end{cases} \Leftrightarrow
+\begin{cases}
+    m > \sqrt{24} \\
+    m > - \sqrt{24} \\
+\end{cases} \Leftrightarrow $ m > \sqrt{24}$ \par
+
++ Trường hợp 2: 
+\begin{cases}
+    m - \sqrt{24} < 0 \\
+    m + \sqrt{24} < 0 \\
+\end{cases} \Leftrightarrow
+\begin{cases}
+    m < \sqrt{24} \\
+    m < - \sqrt{24} \\
+\end{cases} \Leftrightarrow $ m < -\sqrt{24}$
+
+Vậy với $ m > \sqrt{24}$ hoặc $ m < -\sqrt{24}$ thì phương trình có 2 nghiệm phân biệt. \par
+
+\   
+
+b) Theo hệ thức Viét, ta có : \par
+\begin{cases}
+    x_1 + x_2 = -\dfrac{m}{3} \\
+    x_1.x_2 = \dfrac{2}{3} \\
+    \Delta \geq 0 \\
+\end{cases} \par
+
+Xét : $\dfrac{2x_1 - 1}{x_2} + \dfrac{2x_2 - 1}{x_1} = \dfrac{41}{6}$ \par
+\Leftrightarrow \dfrac{2(x_1^2 + x_2^2)-(x_1 + x_2)}{x_1.x_2} = \dfrac{41}{6} \par
+\Leftrightarrow \dfrac{2\big[(x_1 + x_2)^2 - 2x_1.x_2\big] - (x_1 + x_2)}{x_1.x_2} = \dfrac {41}{6} \par
+\Leftrightarrow \dfrac{2\Big[(\dfrac{-m}{3})^2 - 2.\dfrac{2}{3}\Big] - (\dfrac{-m}{3})}{\dfrac{2}{3}} = \dfrac{41}{6} \par
+\Leftrightarrow 2.(\dfrac{m^2}{9}-\dfrac{4}{3}) + \dfrac{m}{3} = \dfrac{41.2}{6.3} = \dfrac{41}{9} \par
+\Leftrightarrow {2m^2}{9} - \dfrac{8}{3} + \dfrac{m}{3} = \dfrac{41}{9} \par
+\Leftrightarrow \dfrac{2m^2 - 24 + 3m}{9} =\dfrac{41}{9} \par
+\Leftrightarrow 2m^2 + 3m - 65 = 0 \Leftrightarrow $ m_1 = 5$ (Nhận) hoặc $m_2 = -\dfrac{13}{2}$ (Loại) \par 
+
+\    
+
+\textbf{Câu 4:} \par
+
+Từ mô tả bài toán ta có hình vẽ sau : \par
+\includegraphics[width=5cm]{de1-4.png} \par
+Gọi x = BD là khoảng cách từ chỗ gãy tới mặt đất, ta có : \par
+$BD + DC = AB = 9m $ vậy $ DC = AB - DB = 9 - x$   . Theo định lý Pytago, ta có : $DC^2 = BD^2 + BC^2$ \par
+\Leftrightarrow $ (9 - x)^2 = x^2 + 3^2$ \par
+\Leftrightarrow $ 81 - 18x + x^2 = x^2 + 3^2$ \par
+\Leftrightarrow $ 81 - 18x + x^2 = x^2 + 9$ \par
+\Leftrightarrow $ 18x = 72$ \par \Leftrightarrow $ x = \dfrac{72}{18} = \dfrac{3}{2}$. Vậy chỗ gãy cách mặt đất là 1,5m.
+
+\    
+
+\textbf{Câu 5:} \par
+Tóm tắt \par
+200g dung dịch NaOH 4\% + 250g dung dịch NaOH 8\% $\rightarrow$ 450g dung dịch NaOH = ? \par
+Bài giải : \par
+- Khối lượng chất tan trong 200g dung dịch NaOH 4\% : \par
+$C\% = \dfrac{m_{ct NaOH_1} . 100}{m_{dd NaOH}}$ \Rightarrow $ m_{ct NaOH_1}$ = $ \dfrac{C\% . m_{dd NaOH_1}}{100} = \dfrac{4 . 200}{100} = 8 (g)$ \par
+- Khối lượng chất tan trong 250g dung dịch NaOH 8\% : \par
+$C'\% = \dfrac{m_{ct NaOH_2} . 100}{m_{dd NaOH}}$ \Rightarrow $ m_{ct NaOH_2}$ = $ \dfrac{C\% . m_{dd NaOH_2}}{100} = \dfrac{8 . 250}{100} = 20 (g)$ \par
+
+Tổng khối lượng chất tan có trong 2 dung dịch NaOH 4\% và 8\% : \par
+
+$m_{hh NaOH} =  m_{ct NaOH_1} + m_{ct NaOH_2} = 8 + 20 = 28(g)$
+
+$C_{hh}\% = \dfrac{m_{hh NaOH}}{M_{NaOH}} = \dfrac{28}{450} . 100 = 6,2 \% $
+
+\   
+
+\textbf{Câu 6:} \par
+Quãng đường đi từ A \rightarrow B : \par
+Gọi thời gian dự kiến là t(h) ? \par
+
+\begin{center}
+\begin{tabular}{ | m{3cm} | m{3cm}| m{3cm} | } 
+\hline
+Vận tốc (km/h) & Thời gian (h) & Quãng đường(km) \\ 
+\hline
+35 & t + 2 &  35.(t + 2)\\ 
+\hline
+50 & t - 1 & 50.(t - 1) \\ 
+\hline
+\end{tabular}
+\end{center}
+
+Vậy ta có : $35.(t + 2) = 50.(t - 1)$
+\Leftrightarrow $ 35t + 70 = 50t - 50 $ \Leftrightarrow $ t = 8 (h)$ \par
+Vậy thời gian dự định đi hết quãng đường AB là : 8(h) \par
+Quãng đường AB : 35.(t + 2) = 35.(8 + 2) = 350 (km)
+
+\ 
+
+\textbf{Câu 6:} \par
+
+$$\includegraphics[width=7cm]{de1-7.png}$
+
+\begin{multicols}{2}
+\underline{Phần suy luận} \par
+a) Chứng minh : \par
+Tứ giác ABDM nội tiếp đường tròn đường kính AB : \par
+\begin{center}
+    \Uparrow \par
+    \begin{cases}
+        \widehat{ADB} = 90^o \\
+        \widehat{AMB} = 90^o \\
+    \end{cases} \par
+\end{center}
+b) Chứng minh : \par
+\begin{center}
+    MD // EF \par
+    \Uparrow \par
+    $\widehat{D_1} = \widehat{E_1}$ (ở vị trí đồgn vị) \par
+    \Uparrow \par
+    \begin{cases}
+        $\widehat{D_1} = \widehat{B_1} =$ sđ $\dfrac{\stackrel\frown{AM}}{2}$ (Tứ giác ABDM nội tiếp) \\
+        $\widehat{E_1} = \widehat{B_1} =$ sđ $\dfrac{\stackrel\frown{AF}}{2}$ (Tứ giác ABEF nội tiếp) \\
+    \end{cases}
+\end{center}
+c) Chứng minh : \par
+\begin{center}
+    $\Delta CEF$ cân \par
+    \Uparrow \par
+    EC = CF \par
+    \Uparrow \par
+    sđ $\stackrel\frown{EC}$ = sđ $\stackrel\frown{CF}$ \par
+    \Uparrow \par
+\end{center}
+
+\columnbreak
+\underline{Phần trình bày} \par
+a) Ta có :
+$\begin{cases}
+    AD \bot BC \Rightarrow \widehat{ADB} = 90^o \\
+    BM \bot AC \Rightarrow \widehat{AMB} = 90^o \\
+\end{cases} \Rightarrow$ 2 góc cũng nhìn một cạnh dưới một góc bằng nhau $\Rightarrow$ ABDM là tứ giác nội tiếp \par
+
+\   
+
+b) Xét tứ giác nội tiếp ABDE, ta có : $\widehat{D_1} = \widehat{B_1} =$ sđ $\dfrac{\stackrel\frown{AM}}{2}$ (1) \par
+Xét tứ giác nội tiếp ABEF (có 4 đỉnh cùng năm trên đường tròn (O)), ta có : $\widehat{E_1} = \widehat{B_1} =$ sđ $\dfrac{\stackrel\frown{AF}}{2}$ (2) \par
+
+Từ (1) và (2), ta có : $\widehat{D_1} = \widehat{E_1}$ (ở vị trí đồgn vị). Vậy : MD // EF \par 
+
+\   
+c) Tứ giác ABDM nội tiếp : $\widehat{A_1} = \widehat{B_2} =$ sđ$\dfrac{\stackrel\frown{MD}}{2}$ \par
+Ta có : sđ$\stackrel\frown{EC} = 2\widehat{A_1}$ và sđ$\stackrel\frown{CF} = 2\widehat{B_2}$ $\Rightarrow$ sđ $\stackrel\frown{EC}$ = sđ $\stackrel\frown{CF}$ \Rightarrow  EC = CF \Rightarrow  $ \Delta CEF$ cân
+\end{multicols}
+
+\break
+
+\begin{multicols}{2}
+\underline{Phần suy luận} \par
+\begin{cases}
+        $2\widehat{A_1}$ = sđ $\stackrel\frown{EC}$\\
+        $2\widehat{B_2}$ = sđ $\stackrel\frown{CF}$\\
+        $\widehat{A_1} = \widehat{B_2}$ (=sđ$\dfrac{\stackrel\frown{MD}}{2}$ ABDM nội tiếp) \par
+\end{cases}
+\columnbreak
+\    
+\    
+
+\    
+\    
+\underline{Phần trình bày} \par
+\   
+\   
+\    
+\   
+\   
+\end{multicols}
+
+\underline{Phần trình bày} \par
+
+d) Tính diện tích viên phân : \par
+$S_{(AC,\stackrel\frown{AC})} = ?$ (I là chân đường cao từ O xuống AC) \par
+Vì ABDM nội tiếp => $\widehat{DMC} = \widehat{ABC} = 60^o$ (cùng bù với \widehat{AMD}) \par
+Mà $\widehat{ABC} =$ sđ $\dfrac{\stackrel\frown{AC}}{2} \Rightarrow \widehat{AOC} = 2.\widehat{ABC} = 120^o$ \par
+$ S_{hinh-quat-120^o} = \dfrac{S_(o)}{3} = \dfrac{\pi R^2}{3} \par
+$ S_{\Delta AOC} = \dfrac{OI.AC}{2} = \dfrac{sin60^o.R.cos60^o.R.2}{2} = R^2.\dfrac{\sqrt{3}}{2}.\dfrac{1}{2} = \dfrac{R^2.\sqrt{3}}{4} \par
+$S_{(AC,\stackrel\frown{AC})} = \dfrac{\pi R^2}{3} - \dfrac{R^2 \sqrt{3}}{4} = \dfrac{4\pi R^2 - R^2\sqrt{3}}{12} = \dfrac{R^2(4\pi - \sqrt{3})}{12}$
+
+\break
+
+\subsection{Đáp án đề 6}
+
+\textbf{'''''Câu 1:} \par
+a) \dfrac{12}{8 + x^3} = 1 + \dfrac{1}{x + 2} \par
+Điều kiện xác định : $x + 2 \ne 0 \Leftrightarrow x \ne -2$  vì $2^2 - 2x + x^2 = (x - 1)^2 + 3 > 0 (\forall x)$\par
+Mẫu chung : $8 + x^3 = 2^3 + x^3 = (x + 2) (2^2 - 2x + x^2) $ \par
+Quy đồng mẫu, ta có : \par
+\dfrac{12}{(x + 2) (2^2 - 2x + x^2)} = \dfrac{(x + 2) (2^2 - 2x + x^2)}{(x + 2) (2^2 - 2x + x^2)} + \dfrac{(2^2 - 2x + x^2)}{(x + 2) (2^2 - 2x + x^2)} \par
+\Rightarrow 12 = 8 + x^3 + 4 - 2x + x^2 \par
+\Leftrightarrow x^3 - 2x + x^2 = 0 \par
+\Leftrightarrow x(x^2 - 2 + x) = 0 \par
+$\Leftrightarrow x = 0$ hoặc $x^2 +x - 2 = 0$\par
+$\Leftrightarrow x = 0$ (nhận) hoặc $x = 1$ (nhận) hoặc $x = -2$ (nhận) \par
+(dùng công thức nhẩm nghiệm, trường hợp $a + b + c = 0) $\par
+Vậy tập nghiệm của phương trình là : S = $\left\{-2; 0; 1\right\}$ \par
+
+\   
+
+b) (3x^2 - 5x + 1)(x^2 - 4)=0 \par
+\Leftrightarrow (3x^2 - 5x + 1)(x - 2)(x + 2)=0 \par
+$\Leftrightarrow 3x^2 - 5x + 1 = 0$ hoặc $x = 2$ hoặc $x = -2$ \par
+3x^2 - 5x + 1 = 0 \par
+$\Delta = (-5)^2 - 4.3.1 = 25 - 12 = 13$ \par
+x_1 = \dfrac{-5 + \sqrt{13}}{2.3} = \dfrac{-5 + \sqrt{13}}{6} \par
+x_2 = \dfrac{-5 - \sqrt{13}}{2.3} = \dfrac{-5 - \sqrt{13}}{6} \par
+Vậy tập nghiệm của phương trình là : S = $\left\{-2; \dfrac{-5 - \sqrt{13}}{6}; \dfrac{-5 + \sqrt{13}}{6}; 2\right\}$ \par
+
+\   
+
+c) 0,3x^4 + 1,8x^2 + 1,5 = 0 \par
+Đặt X = x^2 > 0 \par
+Ta có : $0,3X^2 + 1,8X + 1,5 = 0$ \par
+\Leftrightarrow 3X^2 + 18X + 15 = 0 \par
+Áp dụng quy tắc nhẩm nghiệm dạng : $a - b + c = 3 - 18 + 15 = 0$. Ta có $X_1 = -1$ (loại) hoặc $X_2 = -5$ (loại).Vậy phương trình vô nghiệm $S = \emptyset$
+
+\  
+
+\textbf{Câu 2:} \par
+\begin{multicols}{2}
+y = x^2 (P) \par
+Tập xác định : \mathbb{R}
+c
+
+\columnbreak
+y = -x + 2 (d) \par
+Tập xác định : \mathbb{R}
+\begin{center}
+\begin{tabular}{ | m{2.0cm} | m{0.5cm}| m{0.5cm} |} 
+\hline
+x & 0 &  2\\ 
+\hline
+y = -x + 2 & 2 & 0 \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\end{multicols}
+
+Đồ thị hàm số : \par 
+
+\includegraphics[width=15cm]{de-6-2-1.png}
+
+b) Từ đồ thị câu a), ta thấy (P) cắt (d) tại 2 điểm có toạ độ là A(-2; 4) và b(1; 1) \par
+
+c) Gọi $M(x_0, y_0)$ là toạ độ điểm cần tìm \par
+$M \in (P)$ vậy $M(x_0; x_0^2)$ \par
+Gọi $H(x_1, y_1)$ là chân đường cao hạ từ M tới AB, vậy ta có công thức tính diện tích $\Delta ABM$ :\par
+$ S_{\Delta ABM} = \dfrac {AB.MH}{2}$ vì $AB =  const $ (không phụ thuộc vị trí của M trên (P)). \par
+Vậy $S_{\Delta ABM max}$ khi $MH_{max}}$ 
+$MH = \sqrt{(x_0 - x_1)^2 + (y_0 - y_1)^2}$
+
+\textbf{Câu 3:} \par
+
+\newline a) 
+
+\break
+
+\subsection{Đáp án đề 20}
+
+\textbf{'''''Câu 1:} \par
+
+\begin{multicols}{2}
+Parabol (P) $y = \dfrac{1}{2}x^2$ \par
+Tập xác định : $\mathbb R$ \par
+\begin{center}
+\begin{tabular}{ | m{1.5cm} | m{0.5cm}| m{0.5cm} | m{0.5cm} | m{0.5cm} | m{0.5cm} |} 
+\hline
+x & -2 & -1 & 0 & 1 & 2 \\ 
+\hline
+$y = \dfrac{1}{2}x^2$  & 8 & 2 & 0 & 2 & 8 \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\columnbreak
+Đường thẳng (D) $y = -\dfrac{3}{2}x + 2$ \par
+Tập xác định : $\mathbb R$ \par
+\begin{center}
+\begin{tabular}{ | m{2.5cm} | m{0.5cm}| m{0.5cm} |} 
+\hline
+x & 0 &  2\\ 
+\hline
+$y = -\dfrac{3}{2}x + 2$ & 2 & -1 \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{multicols}
+Đồ thị 2 hàm số trên cùng một hệ trục toạ độ : \par
+
+\begin{center}
+    \includegraphics[width=10cm]{de20-1.png}
+\end{center}
+
+b) Gọi $A(x_A; y_A)$ là toạ độ giao điểm giữa (D') và (P). \par
+$A \in (P)$, thay $x_A = 2$ vào $y = \dfrac{1}{2}x^2$ , ta có : $y_A = \dfrac{1}{2}.2^2 = 2$. \par
+Phương trình đường thẳng (D') có dạng : $y = ax + b$ 
+Vì (D') // (D) nên $a = a' = -\dfrac{3}{2}$ \par
+Vì $A(2; 2) \in (D')$, thay x = 2, y = 2 vào : $y = ax + b$ ta có : $2 = 2(-\dfrac{3}{2}) + b \Rightarrow b = 5$. Vậy phương trình đường thẳng (D') là : $y = -\dfrac{3}{2}x + 5$.
+
+\   
+
+\textbf{Câu 2:} 
+Cho phương trình : $x^2 - (2m + 1)x - m^2 + m - 3 = 0$ (1) (x là ẩn) \par
+a) Ta có: $\Delta = (2m + 1)^2 - 4(-m^2 + m -3) = 4m^2 + 4m + 1 + 4m^2 - 4m + 12 = 8m^2 + 13 \ge 13 > 0$ $\forall m$ \par
+\    
+
+b) Áp dụng hệ thức Viét, ta có: \par
+$$\begin{cases}
+        x_1 + x_2 = -\dfrac{b}{a} = 2m +1 \\
+        x_1.x_2 = \dfrac{c}{a} =  -m^2 + m - 3
+\end{cases}$
+Định m để : $x_1(x_1-3) + x_2(x_2 - 3) + 2x_1x_2 = 2x_1^2x_2 + 2x_1x_2^2$ \par
+\Leftrightarrow x_1^2 - 3x_1 + x_2^2 - 3x_2 + 2x_1x_2 - 2x_1x_2(x_1 + x_2) = 0 \par
+\Leftrightarrow (x_1^2 + x_2^2) - 3(x_1 + x_2) + 2x_1.x_2 - 2x_1x_2(x_1 + x_2) = 0 \par
+\Leftrightarrow (x_1 + x_2)^2 - 2x_1.x_2 - 3(x_1 + x_2) + 2x_1.x_2 - 2x_1x_2(x_1 + x_2) = 0 \par
+\Leftrightarrow (x_1 + x_2)^2 - 3(x_1 + x_2) - 2x_1x_2(x_1 + x_2) = 0 \par
+Thay hệ thức Viét vào, ta có : \par
+$(2m + 1)^2 - 3(2m + 1) - 2(-m^2 + m - 3)(2m + 1) = 0$ \par
+\Leftrightarrow (2m + 1)(2m + 1 - 3 + 2m^2 - 2m + 6) = 0 \par
+\Leftrightarrow (2m + 1)(2m^2 + 4) = 0 \par
+$\Leftrightarrow 2m + 1 = 0$ hoặc $2m^2 + 4 = 0$ (Vô lý vì $2m^2 + 4 \ge 4 > 0$ $\forall m$). \par
+ Vậy với $m = -\dfrac{1}{2}$ thì phương trình có 2 nghiệm $x_1, x_2$ thoả yêu cầu bài toán.
+ 
+ \    
+
+\textbf{Câu 3:} Gọi x, y lần lượt là số dân năm ngoái 2 tỉnh A và B $(0 \le x, y \le 400000)$. Vậy ta có : $x + y = 4000000$ (1)\par
+Số dân tỉnh A năm nay : $x.(100\% + 1,2\%)$ \par
+Số dân tỉnh B năm nay là : $y.((100\% + 1,1\%)$ \par
+Tổng số dân năm nay là : $x.(100\% + 1,2\%) + y.(100\% + 1,1\%) = 101,2\%x + 101,1\%y = 0$ (2)\par
+Từ (1) và (2), ta có : 
+\begin{cases}
+    x + y = 4000000 \\
+    101,2\%x + 101,1\%y = 0
+\end{cases} \Leftrightarrow
+\begin{cases}
+    x = 1000000 \\
+    y = 3000000 
+\end{cases} \par
+Vậy số dân tỉnh A năm ngoái là :1000000 người, năm nay là : $1000000.101,2\% = 1012000$ người. \par
+Vậy số dân tỉnh B năm ngoái là :3000000 người, năm nay là : $3000000.101,1\% = 3033000$ người.
+
+\    
+
+\textbf{Câu 4:} \par
+
+\begin{center}
+    \includegraphics[width=8cm]{de20-4.png}
+\end{center}
+Gọi x = BO (m) \par
+Áp dụng hệ thức lượng trong tam giác vuông AOC, ta có : OC = tan34^o.AO (1)\par
+Áp dụng hệ thức lượng trong tam giác vuông BOC, ta có : OC = tan38^o.BO (2)\par
+Từ (1) và (2), ta có : OC = tan34^o . AO = tan38^o.BO \rightarrow  tan38^o . x = tan34^o . (500 + x) \par
+$x = \dfrac{tan34^o.500}{tan38^o - tan34^o} \approx 36,01 (m)$ \par
+Vậy $OC = tan34^o.AO = tan34^o.(AB + BO) = tan34^o.(500 + 36,01) \approx 361,54 (m)$ \par
+Vậy độ cao ngọn núi đó là : 361,54 (m).
+
+\    
+
+\textbf{Câu 5:} Coi căn phòng như một khối hộp hình chữ nhật\par
+Diện tích xung quanh căn phòng : $S_xq = 2.(4 + 8).3,6 = 86,4 (m^2)$ \par
+Diện tích trần nhà : $S_{tr} = 4.8 = 32 (m^2)$ \par
+Diện tích cửa ra vào : $S_{ravao} = 1,2.2 = 2,4 (m^2)$ \par
+Diện tích 2 cửa sổ : $S_{cuaso} = 2.1,2.1,2 = 2,88 (m^2)$ \par
+Tổng diện tích cần sơn : $S = 86,4 + 32 - 2,4 - 2,88 = 113,12 (m^2)$
+
+\    
+
+\textbf{Câu 6:} Nam cần mua 11 bánh thì Nam phải mua ít nhất là 9 bánh và được tặng 2 bánh, vậy số tiền Nam phải trả khi mua riêng là : 9 x 6000 = 54000 (đồng) \par 
+Lan cần mua 14 cái bánh, vậy số bánh Lan phải mua ít nhất là 12 cái bánh và được tặng 3 cái bánh, số tiền Lan phải trả là : 12 x 6000 = 72000 (đồng) \par
+Tổng số tiền 2 bạn phải trả khi mua riêng là : 32000 + 48000 = 126000 (đồng) \par
+Khi 2 bạn mua chung, tổng số bánh là 25 cái thì 2 bạn chỉ việc mua 20 bánh và được tặng thêm 5 cái là đủ, số tiền cần trả là : 20 x 6000 = 120000 (đồng) \par
+Số tiền 2 bạn phải trả tỉ lệ với số bánh mỗi bạn mua. \par
+Số tiền một cái bánh 2 bạn mua chung : 120000 : 120000 : 25 = 4800 (đồng) \par
+Số tiền bạn Nam trả : 11 x 4800 = 52800 (đồng) \par
+Số tiền bạn Lan  trả : 14 x 4800 = 67200 (đồng) \par
+Vậy Lan tiết kiệm được : 72000 - 67200 = 4800(đồng) khi mua chung. \par
+Vậy Nam tiết kiệm được 54000 - 52800 = 1200(đồng) khi mua chung.
+
+\   
+
+\textbf{Câu 7:} \par
+
+\break
+
+\end{document}
+
